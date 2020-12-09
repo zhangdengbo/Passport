@@ -1,0 +1,167 @@
+<!doctype html>
+<#assign basePath=request.contextPath>
+<!--注意：引入thymeleaf的名称空间-->
+<html lang="zh" >
+<head>
+    <meta charset="UTF-8">
+    <title>测试页面</title>
+    <link rel="stylesheet" type="text/css" href="${basePath}/static/css/easyui/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="${basePath}/static/css/easyui/themes/icon.css">
+    <script type="text/javascript" src="${basePath}/static/js/plugin//jquery.min.js" ></script>
+    <script type="text/javascript" src="${basePath}/static/js/plugin/easyui/jquery.easyui.min.js" ></script>
+    <script src="${basePath}/static/js/plugin/easyui/locale/easyui-lang-zh_CN.js"></script>
+    <script>
+        /**
+         * 添加菜单选项 title 名称 href 链接 iconCls 图标样式 iframe
+         * 链接跳转方式（true为iframe，false为href）
+         */
+        function addTab(title, href, iconCls, iframe) {
+            // removeTab();
+            var tabPanel = $('#wu-tabs');
+            if (!tabPanel.tabs('exists', title)) {
+                tabPanel.tabs('add', {
+                    title : title,
+                    iconCls : iconCls,
+                    fit : true,
+                    cls : 'pd3',
+                    closable : true,
+                    content : '<iframe name="' + title + '"id=" "src="'+href+'" width="100%" height="100%" frameborder="0" scrolling="auto" ></iframe>'
+            });
+            }
+            else {
+                tabPanel.tabs('select', title);
+            }
+        }
+
+        /**
+         * 移除菜单选项
+         */
+        function removeTab() {
+            var tabPanel = $('#wu-tabs');
+            var tab = tabPanel.tabs('getSelected');
+            if (tab) {
+                var index = tabPanel.tabs('getTabIndex', tab);
+                tabPanel.tabs('close', index);
+
+            }
+        }
+
+        /**
+         * 事件执行
+         */
+        function rightClickTab(action) {
+            var alltabs = $('#wu-tabs').tabs('tabs');
+            var currentTab = $('#wu-tabs').tabs('getSelected');
+            var allTabtitle = [];
+            $.each(alltabs, function(i, n) {
+                allTabtitle.push($(n).panel('options').title);
+            })
+            switch (action) {
+                case "refresh":
+                    var url = currentTab.panel('options').href;
+                    currentTab.panel('refresh', url);
+                    break;
+                case "close":
+                    var currtab_title = currentTab.panel('options').title;
+                    $('#wu-tabs').tabs('close', currtab_title);
+                    break;
+                case "closeall":
+                    $.each(allTabtitle, function(i, n) {
+                        if (n != onlyOpenTitle) {
+                            $('#wu-tabs').tabs('close', n);
+                        }
+                    });
+                    break;
+                case "closeother":
+                    var currtab_title = currentTab.panel('options').title;
+                    $.each(allTabtitle, function(i, n) {
+                        if (n != currtab_title && n != onlyOpenTitle) {
+                            $('#wu-tabs').tabs('close', n);
+                        }
+                    });
+                    break;
+                case "closeright":
+                    var tabIndex = $('#wu-tabs').tabs('getTabIndex', currentTab);
+                    $.each(allTabtitle, function(i, n) {
+                        if (i > tabIndex) {
+                            if (n != onlyOpenTitle) {
+                                $('#wu-tabs').tabs('close', n);
+                            }
+                        }
+                    });
+                    break;
+                case "closeleft":
+                    var tabIndex = $('#wu-tabs').tabs('getTabIndex', currentTab);
+                    $.each(allTabtitle, function(i, n) {
+                        if (i < tabIndex) {
+                            if (n != onlyOpenTitle) {
+                                $('#wu-tabs').tabs('close', n);
+                            }
+                        }
+                    });
+                    break;
+            }
+        }
+
+        $(function() {
+
+            $('#tree_node').accordion({
+                fillSpace: true,
+                fit: true,
+                border: false,
+                animate: false
+            });
+
+            /**
+             * 右键菜单click
+             */
+            $("#index_right_click").menu({
+                onClick : function(item) {
+                    rightClickTab(item.id);
+                }
+            });
+
+            $(".easyui-tree .tree-node").on("click", function() {
+                var $aElement = $(this).find("a[name='_tree_node_']");
+                var title = $aElement.text();
+                var url = $aElement.attr('data-link');
+                var iconCls = $aElement.attr('data-icon');
+                var iframe = $aElement.attr('iframe') == 1 ? true : false;
+                addTab(title, url, iconCls, iframe);
+            });
+
+        })
+
+    </script>
+</head>
+<body class="easyui-layout">
+<div data-options="region:'west',split:true,title:'菜单栏'" style="width:150px;">
+    <div class="easyui-accordion" data-options="border:false,fit:true" id="tree_node">
+        <!-- 这里由于只有一个，所以不设置title-->
+        <div data-options="collapsible:true,iconCls:'icon-application-cascade'" title="用户管理"  ><!-- 每一个div都是accordion中依赖的panel -->
+            <ul class="easyui-tree" >
+                <li  iconCls="icon-award-star-gold-1"> <a href="javascript:void(0);"  name="_tree_node_" data-icon="icon-award-star-gold-1" data-link="/testIndex" iframe="0">用户管理</a> </li>
+                <li  iconCls="icon-award-star-gold-1"> <a href="javascript:void(0);"  name="_tree_node_" data-icon="icon-award-star-gold-1" data-link="/roleIndex" iframe="0">角色管理</a> </li>
+                <li  iconCls="icon-award-star-gold-1"> <a href="javascript:void(0);"  name="_tree_node_" data-icon="icon-award-star-gold-1" data-link="/priorityIndex" iframe="0">权限管理</a> </li>
+            </ul>
+        </div>
+        <div data-options="collapsible:true,iconCls:'icon-application-cascade'" title="数据管理"  ><!-- 每一个div都是accordion中依赖的panel -->
+            <ul class="easyui-tree">
+                <li  iconCls="icon-award-star-gold-1"> <a href="javascript:void(0);"  name="_tree_node_" data-icon="icon-award-star-gold-1" data-link="/testIndex" iframe="0">用户管理</a> </li>
+                <li  iconCls="icon-award-star-gold-1"> <a href="javascript:void(0);"  name="_tree_node_" data-icon="icon-award-star-gold-1" data-link="/testIndex" iframe="0">用户管理</a> </li>
+                <li  iconCls="icon-award-star-gold-1"> <a href="javascript:void(0);"  name="_tree_node_" data-icon="icon-award-star-gold-1" data-link="/testIndex" iframe="0">用户管理</a> </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div data-options="region:'center',title:'内容'">
+    <div id="wu-tabs" class="easyui-tabs" data-options="border:false,fit:true">
+        <div title="首页" data-options="href:'',closable:false,iconCls:'icon-tip',cls:'pd3'"></div>
+
+    </div>
+</div>
+
+
+</div>
+</body>
+</html>

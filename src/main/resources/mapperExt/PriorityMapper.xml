@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.yidianpuzi.mapper.PriorityMapper">
+    <select id="findAllPriority" resultType="com.yidianpuzi.domain.Priority">
+        select
+        <include refid="Base_Column_List"/>
+        from t_priority
+    </select>
+
+    <select id="findAllPriorityCount" resultType="java.lang.Integer">
+        select
+        count(*)
+        from t_priority
+    </select>
+
+    <!--直接修改-->
+    <update id="updateByPrimaryKey" parameterType="com.yidianpuzi.domain.Priority">
+        update t_priority
+        set priority_name = #{priorityName,jdbcType=VARCHAR},
+            priorty_url=#{priortyUrl,jdbcType=VARCHAR},
+            type=#{type,jdbcType=BIGINT},
+            parent=#{parent,jdbcType=BIGINT},
+            remarks=#{remarks,jdbcType=VARCHAR},
+            update_time=#{updateTime,jdbcType=TIMESTAMP},
+            update_user=#{updateUser,jdbcType=VARCHAR}
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+
+    <!--根据字段是否为空修改,不为空则修改-->
+    <update id="updateByprimarySelective" parameterType="com.yidianpuzi.domain.Priority">
+        update t_priority
+        <set>
+            <if test="priorityName!=null">
+                priority_name = #{priorityName,jdbcType=VARCHAR},
+            </if>
+
+            <if test="priortyUrl!=null">
+                priorty_url = #{priorityName,jdbcType=VARCHAR},
+            </if>
+
+            <if test="type!=null">
+                type = #{type,jdbcType=BIGINT},
+            </if>
+
+            <if test="parent!=null">
+                type = #{parent,jdbcType=BIGINT},
+            </if>
+
+            <if test="remarks!=null">
+                type = #{remarks,jdbcType=VARCHAR},
+            </if>
+
+            <if test="updateTime!=null">
+                type = #{update_time,jdbcType=TIMESTAMP},
+            </if>
+
+            <if test="updateUser!=null">
+                type = #{update_user,jdbcType=BIGINT},
+            </if>
+
+
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+
+    <!--根据id删除-->
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+        delete from t_priority
+        where id =#{id,jdbcType=BIGINT}
+    </delete>
+</mapper>

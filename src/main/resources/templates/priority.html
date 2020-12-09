@@ -1,0 +1,230 @@
+<!doctype html>
+<!--注意：引入thymeleaf的名称空间-->
+<#assign basePath=request.contextPath>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="${basePath}/static/css/easyui/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="${basePath}/static/css/easyui/themes/icon.css">
+    <script type="text/javascript" src="${basePath}/static/js/plugin/jquery.min.js"></script>
+    <script type="text/javascript" src="${basePath}/static/js/plugin/easyui/jquery.easyui.min.js"></script>
+
+    <script>
+        function clos() {
+            $("#win").dialog("close");
+        }
+
+        function Modify() {
+            var isValid = $("#fm").form('validate');
+            if (isValid) {
+                var msg = JSON.stringify($("#fm").serialize());
+                $.ajax({
+                    url: "/operationPriotiry",
+                    type: "post",
+                    data: $("#fm").serialize(),
+                    success: function (response) {
+                        console.log(JSON.stringify(response));
+                        $("#win").dialog("close");
+                        sourceSpace.initDataTable();
+                    },
+                    error: function (response) {
+                        console.log(JSON.stringify(response));
+                    }
+                })
+            }
+        }
+
+        var sourceSpace = {
+            //数据初始话
+            initDataTable: function () {
+                sourceSpace.getDataList();
+            },
+            //获取相应资源数据
+            getDataList: function () {
+
+                $.ajax({
+                    url: "/findAllPriotiry",
+                    data: {},
+                    type: "post",
+                    success: function (response) {
+                        // console.log(JSON.stringify(response.result.rows));
+                        var list = response.result.rows;
+
+                        //弹出层下拉框数据绑定
+                        $("#parentSource").combotree({
+                            data: list
+                        })
+                        //树形表格数据绑定
+                        $("#tbPriority").treegrid({
+                            idField: 'id',
+                            treeField: 'priorityName',
+                            columns: [[
+                                {field: 'id', checkbox: true, width: "5%"},
+                                {field: 'priorityName', title: '资源名称', width: "20%"},
+                                {field: 'priortyUrl', title: 'URL', width: "10%", align: 'right'},
+                                {field: 'type', title: '所属类型', width: "5%"},
+                                {field: 'remarks', title: '备注', width: "10%"},
+                                {field: 'createUser', title: '创建者', width: "5%"},
+                                {field: 'createTime', title: '创建时间', width: "20%"},
+                                {field: 'updateUser', title: '更新者', width: "5%"},
+                                {field: 'updateTime', title: '更新时间', width: "20%"}
+                            ]],
+                            data: list,
+                            toolbar: [{
+                                iconCls: 'icon-add',
+                                text: "新增",
+                                handler: function () {
+                                    $("#fm").form("clear");
+                                    $("#win").dialog({
+                                        title: "新增资源",
+                                        iconCls: "icon-add",
+                                        closed: false
+
+                                    })
+                                }
+
+                            }, '-', {
+                                iconCls: 'icon-edit',
+                                text: "修改",
+                                handler: function () {
+                                    var selectedRow = $("#tbPriority").datagrid("getSelected");
+                                    if (selectedRow) {
+                                        $("#win").dialog({
+                                            title: "编辑资源",
+                                            iconCls: "icon-edit",
+                                            closed: false
+                                        })
+
+                                        $("#sourceId").attr("Value", selectedRow.id);
+                                        if (selectedRow.parent != 0) {
+                                            $("#parentSource").combotree("setValue", selectedRow.parent);
+                                        } else {
+                                            $("#parentSource").combotree("setValue", '');
+                                        }
+                                        $("#sourceName").textbox("setValue", selectedRow.priorityName);
+                                        $("#sourceUrl").textbox("setValue", selectedRow.priortyUrl);
+                                        $("#sourceType").combobox("setValue", selectedRow.type);
+                                        $("#sourceRemark").textbox("setValue", selectedRow.remarks);
+
+
+                                    } else {
+                                        $.messager.show({
+                                            title: '提示',
+                                            msg: "请选择要修改的数据!",
+                                            timeout: 1500,
+                                            showType: 'fade',
+                                            style: {
+                                                top: 'center'
+                                            }
+                                        });
+                                    }
+                                }
+
+                            }, '-', {
+                                iconCls: 'icon-remove',
+                                text: "删除",
+                                handler: function () {
+                                    alert("3")
+                                }
+
+                            }, '-', {
+                                iconCls: 'icon-reload',
+                                text: "刷新",
+                                handler: function () {
+                                    sourceSpace.initDataTable();
+                                }
+                            }],
+                            style: {
+                                height: '100%'
+                            },
+                            singleSelect: true,
+                            selectOnCheck: true,
+                            checkOnSelect: true,
+
+                        });
+                    }
+
+                })
+
+            }
+        }
+
+
+        $(document).ready(function () {
+            sourceSpace.initDataTable();
+
+        })
+    </script>
+</head>
+
+
+<body>
+
+
+<table id="tbPriority"></table>
+<div id="win" class="easyui-dialog" style="width: 400px ; padding: 10px 20px; top:10%"
+     closed="true" buttons="#dlg-buttons" data-options="resizable:true,modal:true">
+    <form id="fm" method="post">
+
+        <input id="sourceId" type="hidden" name="id" value="">
+        <div class="fitem" style="text-align: left">
+            <span style="width: 15%"><label>&emsp;父资源：</label></span>
+
+            <input class="easyui-combotree" id="parentSource" name="parent"
+                   data-options="labelPosition:'top'" style="width:80%">
+        </div>
+
+        <div class="fitem" style="text-align: left;padding-top: 5%">
+            <span style="width: 15%"><label>资源名称：</label></span>
+            <input id="sourceName" name="priorityName" value="" data-options="required:true"
+                   class="easyui-textbox"
+                   style="width: 80%"/>
+        </div>
+
+        <div class="fitem" style="text-align: left;padding-top: 5%">
+            <span style="width: 15%"><label>&emsp;&emsp;URL：</label></span>
+            <input id="sourceUrl" name="priortyUrl" value="" data-options="required:true" class="easyui-textbox"
+                   style="width: 80%"/>
+        </div>
+
+        <div class="fitem" style="text-align: left;padding-top: 5%">
+            <span style="width: 15%"><label>资源类型：</label></span>
+            <select id="sourceType" panelHeight="auto" , data-options="required:true,limitToList:true" ,
+                    class="easyui-combobox"
+                    name="type"
+                    style="width:80%;height: auto;">
+                <option value="1">菜单</option>
+                <option value="2">功能</option>
+                <option value="3">区块</option>
+            </select>
+
+        </div>
+
+        <div class="fitem" style="text-align: left;padding-top: 5%">
+            <span style="width: 15%"><label>&emsp;&emsp;备注：</label></span>
+            <input id="sourceRemark" name="remarks" value="" class="easyui-textbox"
+                   data-options="multiline:true" style="width:80%;height:60px"/>
+
+        </div>
+
+
+        <div id="dlg-buttons" style="display: block">
+            <a id="confirm" href="javascript:void(0)" class="easyui-linkbutton c6" iconcls="icon-ok"
+               onclick="Modify()"
+               style="width: 90px">提交</a>
+            <a href="javascript:void(0)" class="easyui-linkbutton" iconcls="icon-cancel" onclick="clos()"
+               style="width: 90px">取消</a>
+        </div>
+
+    </form>
+
+</div>
+
+
+
+
+</body>
+
+
+</html>

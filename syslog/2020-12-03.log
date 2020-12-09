@@ -1,0 +1,548 @@
+21:57:36 [restartedMain] INFO  com.yidianpuzi.PassportApplication - Starting PassportApplication on LAPTOP-R3E1JBJF with PID 23668 (D:\personal\PassportV2.0\Passport\target\classes started by zhangdengbo in D:\personal\PassportV2.0\Passport)
+21:57:36 [restartedMain] INFO  com.yidianpuzi.PassportApplication - The following profiles are active: dev
+21:57:37 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+21:57:37 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+21:57:40 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$943fa28d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+21:57:41 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8085 (http)
+21:57:41 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8085"]
+21:57:41 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+21:57:41 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.14]
+21:57:41 [restartedMain] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_141\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\NetSarang\Xshell 6\;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Windows\System32;C:\Windows;C:\Windows\System32\wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;"%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;";%MAVEN_HOME%\bin\;*:\apache-maven-3.6.1\bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\system32\config\systemprofile\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Users\zhangdengbo\AppData\Local\Microsoft\WindowsApps;C:\Users\zhangdengbo\AppData\Roaming\npm;D:\apache-maven-3.6.1\bin;;C:\Users\zhangdengbo\AppData\Local\Programs\Fiddler;.]
+21:57:41 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+21:57:41 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4206 ms
+21:57:41 [restartedMain] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+21:57:41 [restartedMain] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+21:57:44 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+21:57:44 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+21:57:44 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+21:57:45 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+21:57:46 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+21:57:46 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+21:57:46 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+21:57:46 [restartedMain] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: findUsersUsingPOST_1
+21:57:46 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8085"]
+21:57:46 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8085 (http) with context path ''
+21:57:46 [restartedMain] INFO  com.yidianpuzi.PassportApplication - Started PassportApplication in 10.868 seconds (JVM running for 16.424)
+21:58:33 [http-nio-8085-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+21:58:33 [http-nio-8085-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+21:58:33 [http-nio-8085-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 13 ms
+21:58:35 [http-nio-8085-exec-2] DEBUG c.y.mapper.UserMapper.findUsersCount - ==>  Preparing: select count(*) from t_user where 1=1
+21:58:35 [http-nio-8085-exec-2] DEBUG c.y.mapper.UserMapper.findUsersCount - ==>  Preparing: select count(*) from t_user where 1=1
+21:58:35 [http-nio-8085-exec-2] DEBUG c.y.mapper.UserMapper.findUsersCount - ==> Parameters: 
+21:58:35 [http-nio-8085-exec-2] DEBUG c.y.mapper.UserMapper.findUsersCount - ==> Parameters: 
+21:58:35 [http-nio-8085-exec-2] DEBUG c.y.mapper.UserMapper.findUsersCount - <==      Total: 1
+21:58:35 [http-nio-8085-exec-2] DEBUG c.y.mapper.UserMapper.findUsersCount - <==      Total: 1
+21:58:35 [http-nio-8085-exec-2] DEBUG c.y.mapper.UserMapper.findUsers - ==>  Preparing: select id, phone, user_name, passwd, last_login_date, passport, status, third_user_id, email, user_type, create_time, create_user, update_time, update_user, remarks from t_user where 1=1 order by id desc limit ?,?
+21:58:35 [http-nio-8085-exec-2] DEBUG c.y.mapper.UserMapper.findUsers - ==>  Preparing: select id, phone, user_name, passwd, last_login_date, passport, status, third_user_id, email, user_type, create_time, create_user, update_time, update_user, remarks from t_user where 1=1 order by id desc limit ?,?
+21:58:35 [http-nio-8085-exec-2] DEBUG c.y.mapper.UserMapper.findUsers - ==> Parameters: 0(Integer), 20(Integer)
+21:58:35 [http-nio-8085-exec-2] DEBUG c.y.mapper.UserMapper.findUsers - ==> Parameters: 0(Integer), 20(Integer)
+21:58:35 [http-nio-8085-exec-2] DEBUG c.y.mapper.UserMapper.findUsers - <==      Total: 1
+21:58:35 [http-nio-8085-exec-2] DEBUG c.y.mapper.UserMapper.findUsers - <==      Total: 1
+21:58:42 [http-nio-8085-exec-3] DEBUG c.y.mapper.UserMapper.findUsersCount - ==>  Preparing: select count(*) from t_user where 1=1
+21:58:42 [http-nio-8085-exec-3] DEBUG c.y.mapper.UserMapper.findUsersCount - ==>  Preparing: select count(*) from t_user where 1=1
+21:58:42 [http-nio-8085-exec-3] DEBUG c.y.mapper.UserMapper.findUsersCount - ==> Parameters: 
+21:58:42 [http-nio-8085-exec-3] DEBUG c.y.mapper.UserMapper.findUsersCount - ==> Parameters: 
+21:58:42 [http-nio-8085-exec-3] DEBUG c.y.mapper.UserMapper.findUsersCount - <==      Total: 1
+21:58:42 [http-nio-8085-exec-3] DEBUG c.y.mapper.UserMapper.findUsersCount - <==      Total: 1
+21:58:42 [http-nio-8085-exec-3] DEBUG c.y.mapper.UserMapper.findUsers - ==>  Preparing: select id, phone, user_name, passwd, last_login_date, passport, status, third_user_id, email, user_type, create_time, create_user, update_time, update_user, remarks from t_user where 1=1 order by id desc limit ?,?
+21:58:42 [http-nio-8085-exec-3] DEBUG c.y.mapper.UserMapper.findUsers - ==>  Preparing: select id, phone, user_name, passwd, last_login_date, passport, status, third_user_id, email, user_type, create_time, create_user, update_time, update_user, remarks from t_user where 1=1 order by id desc limit ?,?
+21:58:42 [http-nio-8085-exec-3] DEBUG c.y.mapper.UserMapper.findUsers - ==> Parameters: 0(Integer), 20(Integer)
+21:58:42 [http-nio-8085-exec-3] DEBUG c.y.mapper.UserMapper.findUsers - ==> Parameters: 0(Integer), 20(Integer)
+21:58:42 [http-nio-8085-exec-3] DEBUG c.y.mapper.UserMapper.findUsers - <==      Total: 1
+21:58:42 [http-nio-8085-exec-3] DEBUG c.y.mapper.UserMapper.findUsers - <==      Total: 1
+21:58:44 [http-nio-8085-exec-6] DEBUG c.y.mapper.RoleMapper.findRolesCount - ==>  Preparing: select count(*) from t_role
+21:58:44 [http-nio-8085-exec-6] DEBUG c.y.mapper.RoleMapper.findRolesCount - ==>  Preparing: select count(*) from t_role
+21:58:44 [http-nio-8085-exec-6] DEBUG c.y.mapper.RoleMapper.findRolesCount - ==> Parameters: 
+21:58:44 [http-nio-8085-exec-6] DEBUG c.y.mapper.RoleMapper.findRolesCount - ==> Parameters: 
+21:58:44 [http-nio-8085-exec-6] DEBUG c.y.mapper.RoleMapper.findRolesCount - <==      Total: 1
+21:58:44 [http-nio-8085-exec-6] DEBUG c.y.mapper.RoleMapper.findRolesCount - <==      Total: 1
+21:58:44 [http-nio-8085-exec-1] DEBUG c.y.m.P.findAllPriorityCount - ==>  Preparing: select count(*) from t_priority
+21:58:44 [http-nio-8085-exec-1] DEBUG c.y.m.P.findAllPriorityCount - ==>  Preparing: select count(*) from t_priority
+21:58:44 [http-nio-8085-exec-1] DEBUG c.y.m.P.findAllPriorityCount - ==> Parameters: 
+21:58:44 [http-nio-8085-exec-1] DEBUG c.y.m.P.findAllPriorityCount - ==> Parameters: 
+21:58:44 [http-nio-8085-exec-1] DEBUG c.y.m.P.findAllPriorityCount - <==      Total: 1
+21:58:44 [http-nio-8085-exec-1] DEBUG c.y.m.P.findAllPriorityCount - <==      Total: 1
+21:58:44 [http-nio-8085-exec-6] DEBUG c.y.mapper.RoleMapper.findRoles - ==>  Preparing: select id, role_name, create_time, create_user, update_user, update_time, remarks from t_role order by id desc limit ?,?
+21:58:44 [http-nio-8085-exec-6] DEBUG c.y.mapper.RoleMapper.findRoles - ==>  Preparing: select id, role_name, create_time, create_user, update_user, update_time, remarks from t_role order by id desc limit ?,?
+21:58:44 [http-nio-8085-exec-6] DEBUG c.y.mapper.RoleMapper.findRoles - ==> Parameters: 0(Integer), 20(Integer)
+21:58:44 [http-nio-8085-exec-6] DEBUG c.y.mapper.RoleMapper.findRoles - ==> Parameters: 0(Integer), 20(Integer)
+21:58:44 [http-nio-8085-exec-6] DEBUG c.y.mapper.RoleMapper.findRoles - <==      Total: 5
+21:58:44 [http-nio-8085-exec-6] DEBUG c.y.mapper.RoleMapper.findRoles - <==      Total: 5
+21:58:44 [http-nio-8085-exec-1] DEBUG c.y.m.PriorityMapper.findAllPriority - ==>  Preparing: select id, priority_name, priorty_url, type, parent, remarks, create_time,create_user,update_time,update_user from t_priority
+21:58:44 [http-nio-8085-exec-1] DEBUG c.y.m.PriorityMapper.findAllPriority - ==>  Preparing: select id, priority_name, priorty_url, type, parent, remarks, create_time,create_user,update_time,update_user from t_priority
+21:58:44 [http-nio-8085-exec-1] DEBUG c.y.m.PriorityMapper.findAllPriority - ==> Parameters: 
+21:58:44 [http-nio-8085-exec-1] DEBUG c.y.m.PriorityMapper.findAllPriority - ==> Parameters: 
+21:58:44 [http-nio-8085-exec-1] DEBUG c.y.m.PriorityMapper.findAllPriority - <==      Total: 16
+21:58:44 [http-nio-8085-exec-1] DEBUG c.y.m.PriorityMapper.findAllPriority - <==      Total: 16
+21:58:47 [http-nio-8085-exec-9] DEBUG c.y.m.P.findAllPriorityCount - ==>  Preparing: select count(*) from t_priority
+21:58:47 [http-nio-8085-exec-9] DEBUG c.y.m.P.findAllPriorityCount - ==>  Preparing: select count(*) from t_priority
+21:58:47 [http-nio-8085-exec-9] DEBUG c.y.m.P.findAllPriorityCount - ==> Parameters: 
+21:58:47 [http-nio-8085-exec-9] DEBUG c.y.m.P.findAllPriorityCount - ==> Parameters: 
+21:58:47 [http-nio-8085-exec-9] DEBUG c.y.m.P.findAllPriorityCount - <==      Total: 1
+21:58:47 [http-nio-8085-exec-9] DEBUG c.y.m.P.findAllPriorityCount - <==      Total: 1
+21:58:47 [http-nio-8085-exec-9] DEBUG c.y.m.PriorityMapper.findAllPriority - ==>  Preparing: select id, priority_name, priorty_url, type, parent, remarks, create_time,create_user,update_time,update_user from t_priority
+21:58:47 [http-nio-8085-exec-9] DEBUG c.y.m.PriorityMapper.findAllPriority - ==>  Preparing: select id, priority_name, priorty_url, type, parent, remarks, create_time,create_user,update_time,update_user from t_priority
+21:58:47 [http-nio-8085-exec-9] DEBUG c.y.m.PriorityMapper.findAllPriority - ==> Parameters: 
+21:58:47 [http-nio-8085-exec-9] DEBUG c.y.m.PriorityMapper.findAllPriority - ==> Parameters: 
+21:58:47 [http-nio-8085-exec-9] DEBUG c.y.m.PriorityMapper.findAllPriority - <==      Total: 16
+21:58:47 [http-nio-8085-exec-9] DEBUG c.y.m.PriorityMapper.findAllPriority - <==      Total: 16
+22:08:09 [http-nio-8085-exec-4] DEBUG c.y.m.R.getAllByRoleId - ==>  Preparing: select id, role_id, priority_id, remarks, create_time, create_user, update_time, update_user from t_role_priority where role_id=?
+22:08:09 [http-nio-8085-exec-4] DEBUG c.y.m.R.getAllByRoleId - ==>  Preparing: select id, role_id, priority_id, remarks, create_time, create_user, update_time, update_user from t_role_priority where role_id=?
+22:08:09 [http-nio-8085-exec-4] DEBUG c.y.m.R.getAllByRoleId - ==> Parameters: 3(Long)
+22:08:09 [http-nio-8085-exec-4] DEBUG c.y.m.R.getAllByRoleId - ==> Parameters: 3(Long)
+22:08:09 [http-nio-8085-exec-4] DEBUG c.y.m.R.getAllByRoleId - <==      Total: 0
+22:08:09 [http-nio-8085-exec-4] DEBUG c.y.m.R.getAllByRoleId - <==      Total: 0
+22:08:15 [http-nio-8085-exec-7] DEBUG c.y.mapper.RoleMapper.insert - ==>  Preparing: insert into t_role (id, role_name, create_time, create_user, update_user, update_time, remarks) values (?, ?, ?, ?, ?, ?, ?)
+22:08:15 [http-nio-8085-exec-7] DEBUG c.y.mapper.RoleMapper.insert - ==>  Preparing: insert into t_role (id, role_name, create_time, create_user, update_user, update_time, remarks) values (?, ?, ?, ?, ?, ?, ?)
+22:08:15 [http-nio-8085-exec-7] DEBUG c.y.mapper.RoleMapper.insert - ==> Parameters: null, 测试(String), 2020-12-03 22:08:15.559(Timestamp), 1(Long), 1(Long), 2020-12-03 22:08:15.559(Timestamp), 11111(String)
+22:08:15 [http-nio-8085-exec-7] DEBUG c.y.mapper.RoleMapper.insert - ==> Parameters: null, 测试(String), 2020-12-03 22:08:15.559(Timestamp), 1(Long), 1(Long), 2020-12-03 22:08:15.559(Timestamp), 11111(String)
+22:08:15 [http-nio-8085-exec-7] DEBUG c.y.mapper.RoleMapper.insert - <==    Updates: 1
+22:08:15 [http-nio-8085-exec-7] DEBUG c.y.mapper.RoleMapper.insert - <==    Updates: 1
+22:08:15 [http-nio-8085-exec-10] DEBUG c.y.mapper.RoleMapper.findRolesCount - ==>  Preparing: select count(*) from t_role
+22:08:15 [http-nio-8085-exec-10] DEBUG c.y.mapper.RoleMapper.findRolesCount - ==>  Preparing: select count(*) from t_role
+22:08:15 [http-nio-8085-exec-10] DEBUG c.y.mapper.RoleMapper.findRolesCount - ==> Parameters: 
+22:08:15 [http-nio-8085-exec-10] DEBUG c.y.mapper.RoleMapper.findRolesCount - ==> Parameters: 
+22:08:15 [http-nio-8085-exec-10] DEBUG c.y.mapper.RoleMapper.findRolesCount - <==      Total: 1
+22:08:15 [http-nio-8085-exec-10] DEBUG c.y.mapper.RoleMapper.findRolesCount - <==      Total: 1
+22:08:15 [http-nio-8085-exec-10] DEBUG c.y.mapper.RoleMapper.findRoles - ==>  Preparing: select id, role_name, create_time, create_user, update_user, update_time, remarks from t_role order by id desc limit ?,?
+22:08:15 [http-nio-8085-exec-10] DEBUG c.y.mapper.RoleMapper.findRoles - ==>  Preparing: select id, role_name, create_time, create_user, update_user, update_time, remarks from t_role order by id desc limit ?,?
+22:08:15 [http-nio-8085-exec-10] DEBUG c.y.mapper.RoleMapper.findRoles - ==> Parameters: 0(Integer), 20(Integer)
+22:08:15 [http-nio-8085-exec-10] DEBUG c.y.mapper.RoleMapper.findRoles - ==> Parameters: 0(Integer), 20(Integer)
+22:08:15 [http-nio-8085-exec-10] DEBUG c.y.mapper.RoleMapper.findRoles - <==      Total: 6
+22:08:15 [http-nio-8085-exec-10] DEBUG c.y.mapper.RoleMapper.findRoles - <==      Total: 6
+22:08:30 [http-nio-8085-exec-5] DEBUG c.y.m.R.getAllByRoleId - ==>  Preparing: select id, role_id, priority_id, remarks, create_time, create_user, update_time, update_user from t_role_priority where role_id=?
+22:08:30 [http-nio-8085-exec-5] DEBUG c.y.m.R.getAllByRoleId - ==>  Preparing: select id, role_id, priority_id, remarks, create_time, create_user, update_time, update_user from t_role_priority where role_id=?
+22:08:30 [http-nio-8085-exec-5] DEBUG c.y.m.R.getAllByRoleId - ==> Parameters: 9(Long)
+22:08:30 [http-nio-8085-exec-5] DEBUG c.y.m.R.getAllByRoleId - ==> Parameters: 9(Long)
+22:08:30 [http-nio-8085-exec-5] DEBUG c.y.m.R.getAllByRoleId - <==      Total: 0
+22:08:30 [http-nio-8085-exec-5] DEBUG c.y.m.R.getAllByRoleId - <==      Total: 0
+22:08:42 [http-nio-8085-exec-8] DEBUG c.y.m.R.deleteByRoleId - ==>  Preparing: /*根据角色id删除对应所有权限*/ delete from t_role_priority where role_id = ?
+22:08:42 [http-nio-8085-exec-8] DEBUG c.y.m.R.deleteByRoleId - ==>  Preparing: /*根据角色id删除对应所有权限*/ delete from t_role_priority where role_id = ?
+22:08:42 [http-nio-8085-exec-8] DEBUG c.y.m.R.deleteByRoleId - ==> Parameters: 9(Long)
+22:08:42 [http-nio-8085-exec-8] DEBUG c.y.m.R.deleteByRoleId - ==> Parameters: 9(Long)
+22:08:42 [http-nio-8085-exec-8] DEBUG c.y.m.R.deleteByRoleId - <==    Updates: 0
+22:08:42 [http-nio-8085-exec-8] DEBUG c.y.m.R.deleteByRoleId - <==    Updates: 0
+22:08:42 [http-nio-8085-exec-8] DEBUG c.y.m.RolePriorityMapper.insertList - ==>  Preparing: insert into t_role_priority (id,role_id,priority_id,remarks,create_time,create_user,update_time,update_user) VALUES (null,?,?,?,?,?,?,?) , (null,?,?,?,?,?,?,?) , (null,?,?,?,?,?,?,?) , (null,?,?,?,?,?,?,?) , (null,?,?,?,?,?,?,?) , (null,?,?,?,?,?,?,?) , (null,?,?,?,?,?,?,?) , (null,?,?,?,?,?,?,?) , (null,?,?,?,?,?,?,?) , (null,?,?,?,?,?,?,?) , (null,?,?,?,?,?,?,?) , (null,?,?,?,?,?,?,?) , (null,?,?,?,?,?,?,?)
+22:08:42 [http-nio-8085-exec-8] DEBUG c.y.m.RolePriorityMapper.insertList - ==>  Preparing: insert into t_role_priority (id,role_id,priority_id,remarks,create_time,create_user,update_time,update_user) VALUES (null,?,?,?,?,?,?,?) , (null,?,?,?,?,?,?,?) , (null,?,?,?,?,?,?,?) , (null,?,?,?,?,?,?,?) , (null,?,?,?,?,?,?,?) , (null,?,?,?,?,?,?,?) , (null,?,?,?,?,?,?,?) , (null,?,?,?,?,?,?,?) , (null,?,?,?,?,?,?,?) , (null,?,?,?,?,?,?,?) , (null,?,?,?,?,?,?,?) , (null,?,?,?,?,?,?,?) , (null,?,?,?,?,?,?,?)
+22:08:42 [http-nio-8085-exec-8] DEBUG c.y.m.RolePriorityMapper.insertList - ==> Parameters: 9(Long), 1(Long), null, 2020-12-03 22:08:42.179(Timestamp), 1(Long), 2020-12-03 22:08:42.179(Timestamp), 1(Long), 9(Long), 2(Long), null, 2020-12-03 22:08:42.179(Timestamp), 1(Long), 2020-12-03 22:08:42.179(Timestamp), 1(Long), 9(Long), 5(Long), null, 2020-12-03 22:08:42.179(Timestamp), 1(Long), 2020-12-03 22:08:42.179(Timestamp), 1(Long), 9(Long), 6(Long), null, 2020-12-03 22:08:42.179(Timestamp), 1(Long), 2020-12-03 22:08:42.179(Timestamp), 1(Long), 9(Long), 7(Long), null, 2020-12-03 22:08:42.179(Timestamp), 1(Long), 2020-12-03 22:08:42.179(Timestamp), 1(Long), 9(Long), 11(Long), null, 2020-12-03 22:08:42.179(Timestamp), 1(Long), 2020-12-03 22:08:42.179(Timestamp), 1(Long), 9(Long), 13(Long), null, 2020-12-03 22:08:42.179(Timestamp), 1(Long), 2020-12-03 22:08:42.179(Timestamp), 1(Long), 9(Long), 14(Long), null, 2020-12-03 22:08:42.179(Timestamp), 1(Long), 2020-12-03 22:08:42.179(Timestamp), 1(Long), 9(Long), 3(Long), null, 2020-12-03 22:08:42.179(Timestamp), 1(Long), 2020-12-03 22:08:42.179(Timestamp), 1(Long), 9(Long), 8(Long), null, 2020-12-03 22:08:42.179(Timestamp), 1(Long), 2020-12-03 22:08:42.179(Timestamp), 1(Long), 9(Long), 9(Long), null, 2020-12-03 22:08:42.179(Timestamp), 1(Long), 2020-12-03 22:08:42.179(Timestamp), 1(Long), 9(Long), 10(Long), null, 2020-12-03 22:08:42.179(Timestamp), 1(Long), 2020-12-03 22:08:42.179(Timestamp), 1(Long), 9(Long), 12(Long), null, 2020-12-03 22:08:42.179(Timestamp), 1(Long), 2020-12-03 22:08:42.179(Timestamp), 1(Long)
+22:08:42 [http-nio-8085-exec-8] DEBUG c.y.m.RolePriorityMapper.insertList - ==> Parameters: 9(Long), 1(Long), null, 2020-12-03 22:08:42.179(Timestamp), 1(Long), 2020-12-03 22:08:42.179(Timestamp), 1(Long), 9(Long), 2(Long), null, 2020-12-03 22:08:42.179(Timestamp), 1(Long), 2020-12-03 22:08:42.179(Timestamp), 1(Long), 9(Long), 5(Long), null, 2020-12-03 22:08:42.179(Timestamp), 1(Long), 2020-12-03 22:08:42.179(Timestamp), 1(Long), 9(Long), 6(Long), null, 2020-12-03 22:08:42.179(Timestamp), 1(Long), 2020-12-03 22:08:42.179(Timestamp), 1(Long), 9(Long), 7(Long), null, 2020-12-03 22:08:42.179(Timestamp), 1(Long), 2020-12-03 22:08:42.179(Timestamp), 1(Long), 9(Long), 11(Long), null, 2020-12-03 22:08:42.179(Timestamp), 1(Long), 2020-12-03 22:08:42.179(Timestamp), 1(Long), 9(Long), 13(Long), null, 2020-12-03 22:08:42.179(Timestamp), 1(Long), 2020-12-03 22:08:42.179(Timestamp), 1(Long), 9(Long), 14(Long), null, 2020-12-03 22:08:42.179(Timestamp), 1(Long), 2020-12-03 22:08:42.179(Timestamp), 1(Long), 9(Long), 3(Long), null, 2020-12-03 22:08:42.179(Timestamp), 1(Long), 2020-12-03 22:08:42.179(Timestamp), 1(Long), 9(Long), 8(Long), null, 2020-12-03 22:08:42.179(Timestamp), 1(Long), 2020-12-03 22:08:42.179(Timestamp), 1(Long), 9(Long), 9(Long), null, 2020-12-03 22:08:42.179(Timestamp), 1(Long), 2020-12-03 22:08:42.179(Timestamp), 1(Long), 9(Long), 10(Long), null, 2020-12-03 22:08:42.179(Timestamp), 1(Long), 2020-12-03 22:08:42.179(Timestamp), 1(Long), 9(Long), 12(Long), null, 2020-12-03 22:08:42.179(Timestamp), 1(Long), 2020-12-03 22:08:42.179(Timestamp), 1(Long)
+22:08:42 [http-nio-8085-exec-8] DEBUG c.y.m.RolePriorityMapper.insertList - <==    Updates: 13
+22:08:42 [http-nio-8085-exec-8] DEBUG c.y.m.RolePriorityMapper.insertList - <==    Updates: 13
+22:08:45 [http-nio-8085-exec-6] DEBUG c.y.m.R.getAllByRoleId - ==>  Preparing: select id, role_id, priority_id, remarks, create_time, create_user, update_time, update_user from t_role_priority where role_id=?
+22:08:45 [http-nio-8085-exec-6] DEBUG c.y.m.R.getAllByRoleId - ==>  Preparing: select id, role_id, priority_id, remarks, create_time, create_user, update_time, update_user from t_role_priority where role_id=?
+22:08:45 [http-nio-8085-exec-6] DEBUG c.y.m.R.getAllByRoleId - ==> Parameters: 8(Long)
+22:08:45 [http-nio-8085-exec-6] DEBUG c.y.m.R.getAllByRoleId - ==> Parameters: 8(Long)
+22:08:45 [http-nio-8085-exec-6] DEBUG c.y.m.R.getAllByRoleId - <==      Total: 0
+22:08:45 [http-nio-8085-exec-6] DEBUG c.y.m.R.getAllByRoleId - <==      Total: 0
+22:08:46 [http-nio-8085-exec-4] DEBUG c.y.m.R.getAllByRoleId - ==>  Preparing: select id, role_id, priority_id, remarks, create_time, create_user, update_time, update_user from t_role_priority where role_id=?
+22:08:46 [http-nio-8085-exec-4] DEBUG c.y.m.R.getAllByRoleId - ==>  Preparing: select id, role_id, priority_id, remarks, create_time, create_user, update_time, update_user from t_role_priority where role_id=?
+22:08:46 [http-nio-8085-exec-4] DEBUG c.y.m.R.getAllByRoleId - ==> Parameters: 9(Long)
+22:08:46 [http-nio-8085-exec-4] DEBUG c.y.m.R.getAllByRoleId - ==> Parameters: 9(Long)
+22:08:46 [http-nio-8085-exec-4] DEBUG c.y.m.R.getAllByRoleId - <==      Total: 13
+22:08:46 [http-nio-8085-exec-4] DEBUG c.y.m.R.getAllByRoleId - <==      Total: 13
+22:12:29 [http-nio-8085-exec-10] DEBUG c.y.m.R.getAllByRoleId - ==>  Preparing: select id, role_id, priority_id, remarks, create_time, create_user, update_time, update_user from t_role_priority where role_id=?
+22:12:29 [http-nio-8085-exec-10] DEBUG c.y.m.R.getAllByRoleId - ==>  Preparing: select id, role_id, priority_id, remarks, create_time, create_user, update_time, update_user from t_role_priority where role_id=?
+22:12:29 [http-nio-8085-exec-10] DEBUG c.y.m.R.getAllByRoleId - ==> Parameters: 1(Long)
+22:12:29 [http-nio-8085-exec-10] DEBUG c.y.m.R.getAllByRoleId - ==> Parameters: 1(Long)
+22:12:29 [http-nio-8085-exec-10] DEBUG c.y.m.R.getAllByRoleId - <==      Total: 16
+22:12:29 [http-nio-8085-exec-10] DEBUG c.y.m.R.getAllByRoleId - <==      Total: 16
+22:12:30 [http-nio-8085-exec-3] DEBUG c.y.m.R.getAllByRoleId - ==>  Preparing: select id, role_id, priority_id, remarks, create_time, create_user, update_time, update_user from t_role_priority where role_id=?
+22:12:30 [http-nio-8085-exec-3] DEBUG c.y.m.R.getAllByRoleId - ==>  Preparing: select id, role_id, priority_id, remarks, create_time, create_user, update_time, update_user from t_role_priority where role_id=?
+22:12:30 [http-nio-8085-exec-3] DEBUG c.y.m.R.getAllByRoleId - ==> Parameters: 3(Long)
+22:12:30 [http-nio-8085-exec-3] DEBUG c.y.m.R.getAllByRoleId - ==> Parameters: 3(Long)
+22:12:30 [http-nio-8085-exec-3] DEBUG c.y.m.R.getAllByRoleId - <==      Total: 0
+22:12:30 [http-nio-8085-exec-3] DEBUG c.y.m.R.getAllByRoleId - <==      Total: 0
+22:12:30 [http-nio-8085-exec-5] DEBUG c.y.m.R.getAllByRoleId - ==>  Preparing: select id, role_id, priority_id, remarks, create_time, create_user, update_time, update_user from t_role_priority where role_id=?
+22:12:30 [http-nio-8085-exec-5] DEBUG c.y.m.R.getAllByRoleId - ==>  Preparing: select id, role_id, priority_id, remarks, create_time, create_user, update_time, update_user from t_role_priority where role_id=?
+22:12:30 [http-nio-8085-exec-5] DEBUG c.y.m.R.getAllByRoleId - ==> Parameters: 3(Long)
+22:12:30 [http-nio-8085-exec-5] DEBUG c.y.m.R.getAllByRoleId - ==> Parameters: 3(Long)
+22:12:30 [http-nio-8085-exec-5] DEBUG c.y.m.R.getAllByRoleId - <==      Total: 0
+22:12:30 [http-nio-8085-exec-5] DEBUG c.y.m.R.getAllByRoleId - <==      Total: 0
+22:12:31 [http-nio-8085-exec-2] DEBUG c.y.m.R.getAllByRoleId - ==>  Preparing: select id, role_id, priority_id, remarks, create_time, create_user, update_time, update_user from t_role_priority where role_id=?
+22:12:31 [http-nio-8085-exec-2] DEBUG c.y.m.R.getAllByRoleId - ==>  Preparing: select id, role_id, priority_id, remarks, create_time, create_user, update_time, update_user from t_role_priority where role_id=?
+22:12:31 [http-nio-8085-exec-2] DEBUG c.y.m.R.getAllByRoleId - ==> Parameters: 5(Long)
+22:12:31 [http-nio-8085-exec-2] DEBUG c.y.m.R.getAllByRoleId - ==> Parameters: 5(Long)
+22:12:31 [http-nio-8085-exec-2] DEBUG c.y.m.R.getAllByRoleId - <==      Total: 3
+22:12:31 [http-nio-8085-exec-2] DEBUG c.y.m.R.getAllByRoleId - <==      Total: 3
+22:12:31 [http-nio-8085-exec-8] DEBUG c.y.m.R.getAllByRoleId - ==>  Preparing: select id, role_id, priority_id, remarks, create_time, create_user, update_time, update_user from t_role_priority where role_id=?
+22:12:31 [http-nio-8085-exec-8] DEBUG c.y.m.R.getAllByRoleId - ==>  Preparing: select id, role_id, priority_id, remarks, create_time, create_user, update_time, update_user from t_role_priority where role_id=?
+22:12:31 [http-nio-8085-exec-8] DEBUG c.y.m.R.getAllByRoleId - ==> Parameters: 9(Long)
+22:12:31 [http-nio-8085-exec-8] DEBUG c.y.m.R.getAllByRoleId - ==> Parameters: 9(Long)
+22:12:31 [http-nio-8085-exec-8] DEBUG c.y.m.R.getAllByRoleId - <==      Total: 13
+22:12:31 [http-nio-8085-exec-8] DEBUG c.y.m.R.getAllByRoleId - <==      Total: 13
+22:12:32 [http-nio-8085-exec-9] DEBUG c.y.m.R.getAllByRoleId - ==>  Preparing: select id, role_id, priority_id, remarks, create_time, create_user, update_time, update_user from t_role_priority where role_id=?
+22:12:32 [http-nio-8085-exec-9] DEBUG c.y.m.R.getAllByRoleId - ==>  Preparing: select id, role_id, priority_id, remarks, create_time, create_user, update_time, update_user from t_role_priority where role_id=?
+22:12:32 [http-nio-8085-exec-9] DEBUG c.y.m.R.getAllByRoleId - ==> Parameters: 8(Long)
+22:12:32 [http-nio-8085-exec-9] DEBUG c.y.m.R.getAllByRoleId - ==> Parameters: 8(Long)
+22:12:32 [http-nio-8085-exec-9] DEBUG c.y.m.R.getAllByRoleId - <==      Total: 0
+22:12:32 [http-nio-8085-exec-9] DEBUG c.y.m.R.getAllByRoleId - <==      Total: 0
+22:12:32 [http-nio-8085-exec-6] DEBUG c.y.m.R.getAllByRoleId - ==>  Preparing: select id, role_id, priority_id, remarks, create_time, create_user, update_time, update_user from t_role_priority where role_id=?
+22:12:32 [http-nio-8085-exec-6] DEBUG c.y.m.R.getAllByRoleId - ==>  Preparing: select id, role_id, priority_id, remarks, create_time, create_user, update_time, update_user from t_role_priority where role_id=?
+22:12:32 [http-nio-8085-exec-6] DEBUG c.y.m.R.getAllByRoleId - ==> Parameters: 5(Long)
+22:12:32 [http-nio-8085-exec-6] DEBUG c.y.m.R.getAllByRoleId - ==> Parameters: 5(Long)
+22:12:32 [http-nio-8085-exec-6] DEBUG c.y.m.R.getAllByRoleId - <==      Total: 3
+22:12:32 [http-nio-8085-exec-6] DEBUG c.y.m.R.getAllByRoleId - <==      Total: 3
+22:12:32 [http-nio-8085-exec-1] DEBUG c.y.m.R.getAllByRoleId - ==>  Preparing: select id, role_id, priority_id, remarks, create_time, create_user, update_time, update_user from t_role_priority where role_id=?
+22:12:32 [http-nio-8085-exec-1] DEBUG c.y.m.R.getAllByRoleId - ==>  Preparing: select id, role_id, priority_id, remarks, create_time, create_user, update_time, update_user from t_role_priority where role_id=?
+22:12:32 [http-nio-8085-exec-1] DEBUG c.y.m.R.getAllByRoleId - ==> Parameters: 3(Long)
+22:12:32 [http-nio-8085-exec-1] DEBUG c.y.m.R.getAllByRoleId - ==> Parameters: 3(Long)
+22:12:32 [http-nio-8085-exec-1] DEBUG c.y.m.R.getAllByRoleId - <==      Total: 0
+22:12:32 [http-nio-8085-exec-1] DEBUG c.y.m.R.getAllByRoleId - <==      Total: 0
+22:12:33 [http-nio-8085-exec-4] DEBUG c.y.m.R.getAllByRoleId - ==>  Preparing: select id, role_id, priority_id, remarks, create_time, create_user, update_time, update_user from t_role_priority where role_id=?
+22:12:33 [http-nio-8085-exec-4] DEBUG c.y.m.R.getAllByRoleId - ==>  Preparing: select id, role_id, priority_id, remarks, create_time, create_user, update_time, update_user from t_role_priority where role_id=?
+22:12:33 [http-nio-8085-exec-4] DEBUG c.y.m.R.getAllByRoleId - ==> Parameters: 2(Long)
+22:12:33 [http-nio-8085-exec-4] DEBUG c.y.m.R.getAllByRoleId - ==> Parameters: 2(Long)
+22:12:33 [http-nio-8085-exec-4] DEBUG c.y.m.R.getAllByRoleId - <==      Total: 2
+22:12:33 [http-nio-8085-exec-4] DEBUG c.y.m.R.getAllByRoleId - <==      Total: 2
+22:12:33 [http-nio-8085-exec-7] DEBUG c.y.m.R.getAllByRoleId - ==>  Preparing: select id, role_id, priority_id, remarks, create_time, create_user, update_time, update_user from t_role_priority where role_id=?
+22:12:33 [http-nio-8085-exec-7] DEBUG c.y.m.R.getAllByRoleId - ==>  Preparing: select id, role_id, priority_id, remarks, create_time, create_user, update_time, update_user from t_role_priority where role_id=?
+22:12:33 [http-nio-8085-exec-7] DEBUG c.y.m.R.getAllByRoleId - ==> Parameters: 1(Long)
+22:12:33 [http-nio-8085-exec-7] DEBUG c.y.m.R.getAllByRoleId - ==> Parameters: 1(Long)
+22:12:33 [http-nio-8085-exec-7] DEBUG c.y.m.R.getAllByRoleId - <==      Total: 16
+22:12:33 [http-nio-8085-exec-7] DEBUG c.y.m.R.getAllByRoleId - <==      Total: 16
+22:12:44 [http-nio-8085-exec-3] DEBUG c.y.m.R.getAllByRoleId - ==>  Preparing: select id, role_id, priority_id, remarks, create_time, create_user, update_time, update_user from t_role_priority where role_id=?
+22:12:44 [http-nio-8085-exec-3] DEBUG c.y.m.R.getAllByRoleId - ==>  Preparing: select id, role_id, priority_id, remarks, create_time, create_user, update_time, update_user from t_role_priority where role_id=?
+22:12:44 [http-nio-8085-exec-3] DEBUG c.y.m.R.getAllByRoleId - ==> Parameters: 5(Long)
+22:12:44 [http-nio-8085-exec-3] DEBUG c.y.m.R.getAllByRoleId - ==> Parameters: 5(Long)
+22:12:44 [http-nio-8085-exec-3] DEBUG c.y.m.R.getAllByRoleId - <==      Total: 3
+22:12:44 [http-nio-8085-exec-3] DEBUG c.y.m.R.getAllByRoleId - <==      Total: 3
+23:04:16 [http-nio-8085-exec-2] DEBUG c.y.m.P.findAllPriorityCount - ==>  Preparing: select count(*) from t_priority
+23:04:16 [http-nio-8085-exec-2] DEBUG c.y.m.P.findAllPriorityCount - ==>  Preparing: select count(*) from t_priority
+23:04:16 [http-nio-8085-exec-2] DEBUG c.y.m.P.findAllPriorityCount - ==> Parameters: 
+23:04:16 [http-nio-8085-exec-2] DEBUG c.y.m.P.findAllPriorityCount - ==> Parameters: 
+23:04:16 [http-nio-8085-exec-2] DEBUG c.y.m.P.findAllPriorityCount - <==      Total: 1
+23:04:16 [http-nio-8085-exec-2] DEBUG c.y.m.P.findAllPriorityCount - <==      Total: 1
+23:04:16 [http-nio-8085-exec-2] DEBUG c.y.m.PriorityMapper.findAllPriority - ==>  Preparing: select id, priority_name, priorty_url, type, parent, remarks, create_time,create_user,update_time,update_user from t_priority
+23:04:16 [http-nio-8085-exec-2] DEBUG c.y.m.PriorityMapper.findAllPriority - ==>  Preparing: select id, priority_name, priorty_url, type, parent, remarks, create_time,create_user,update_time,update_user from t_priority
+23:04:16 [http-nio-8085-exec-2] DEBUG c.y.m.PriorityMapper.findAllPriority - ==> Parameters: 
+23:04:16 [http-nio-8085-exec-2] DEBUG c.y.m.PriorityMapper.findAllPriority - ==> Parameters: 
+23:04:16 [http-nio-8085-exec-2] DEBUG c.y.m.PriorityMapper.findAllPriority - <==      Total: 16
+23:04:16 [http-nio-8085-exec-2] DEBUG c.y.m.PriorityMapper.findAllPriority - <==      Total: 16
+23:11:00 [http-nio-8085-exec-8] DEBUG c.y.m.R.getAllByRoleId - ==>  Preparing: select id, role_id, priority_id, remarks, create_time, create_user, update_time, update_user from t_role_priority where role_id=?
+23:11:00 [http-nio-8085-exec-8] DEBUG c.y.m.R.getAllByRoleId - ==>  Preparing: select id, role_id, priority_id, remarks, create_time, create_user, update_time, update_user from t_role_priority where role_id=?
+23:11:00 [http-nio-8085-exec-8] DEBUG c.y.m.R.getAllByRoleId - ==> Parameters: 5(Long)
+23:11:00 [http-nio-8085-exec-8] DEBUG c.y.m.R.getAllByRoleId - ==> Parameters: 5(Long)
+23:11:00 [http-nio-8085-exec-8] DEBUG c.y.m.R.getAllByRoleId - <==      Total: 3
+23:11:00 [http-nio-8085-exec-8] DEBUG c.y.m.R.getAllByRoleId - <==      Total: 3
+23:11:00 [http-nio-8085-exec-1] DEBUG c.y.m.R.getAllByRoleId - ==>  Preparing: select id, role_id, priority_id, remarks, create_time, create_user, update_time, update_user from t_role_priority where role_id=?
+23:11:00 [http-nio-8085-exec-1] DEBUG c.y.m.R.getAllByRoleId - ==>  Preparing: select id, role_id, priority_id, remarks, create_time, create_user, update_time, update_user from t_role_priority where role_id=?
+23:11:00 [http-nio-8085-exec-1] DEBUG c.y.m.R.getAllByRoleId - ==> Parameters: 5(Long)
+23:11:00 [http-nio-8085-exec-1] DEBUG c.y.m.R.getAllByRoleId - ==> Parameters: 5(Long)
+23:11:00 [http-nio-8085-exec-1] DEBUG c.y.m.R.getAllByRoleId - <==      Total: 3
+23:11:00 [http-nio-8085-exec-1] DEBUG c.y.m.R.getAllByRoleId - <==      Total: 3
+23:12:53 [http-nio-8085-exec-4] DEBUG c.y.m.R.getAllByRoleId - ==>  Preparing: select id, role_id, priority_id, remarks, create_time, create_user, update_time, update_user from t_role_priority where role_id=?
+23:12:53 [http-nio-8085-exec-4] DEBUG c.y.m.R.getAllByRoleId - ==>  Preparing: select id, role_id, priority_id, remarks, create_time, create_user, update_time, update_user from t_role_priority where role_id=?
+23:12:53 [http-nio-8085-exec-4] DEBUG c.y.m.R.getAllByRoleId - ==> Parameters: 2(Long)
+23:12:53 [http-nio-8085-exec-4] DEBUG c.y.m.R.getAllByRoleId - ==> Parameters: 2(Long)
+23:12:53 [http-nio-8085-exec-4] DEBUG c.y.m.R.getAllByRoleId - <==      Total: 2
+23:12:53 [http-nio-8085-exec-4] DEBUG c.y.m.R.getAllByRoleId - <==      Total: 2
+23:12:54 [http-nio-8085-exec-7] DEBUG c.y.m.R.getAllByRoleId - ==>  Preparing: select id, role_id, priority_id, remarks, create_time, create_user, update_time, update_user from t_role_priority where role_id=?
+23:12:54 [http-nio-8085-exec-7] DEBUG c.y.m.R.getAllByRoleId - ==>  Preparing: select id, role_id, priority_id, remarks, create_time, create_user, update_time, update_user from t_role_priority where role_id=?
+23:12:54 [http-nio-8085-exec-7] DEBUG c.y.m.R.getAllByRoleId - ==> Parameters: 2(Long)
+23:12:54 [http-nio-8085-exec-7] DEBUG c.y.m.R.getAllByRoleId - ==> Parameters: 2(Long)
+23:12:54 [http-nio-8085-exec-7] DEBUG c.y.m.R.getAllByRoleId - <==      Total: 2
+23:12:54 [http-nio-8085-exec-7] DEBUG c.y.m.R.getAllByRoleId - <==      Total: 2
+23:12:54 [http-nio-8085-exec-10] DEBUG c.y.m.R.getAllByRoleId - ==>  Preparing: select id, role_id, priority_id, remarks, create_time, create_user, update_time, update_user from t_role_priority where role_id=?
+23:12:54 [http-nio-8085-exec-10] DEBUG c.y.m.R.getAllByRoleId - ==>  Preparing: select id, role_id, priority_id, remarks, create_time, create_user, update_time, update_user from t_role_priority where role_id=?
+23:12:54 [http-nio-8085-exec-10] DEBUG c.y.m.R.getAllByRoleId - ==> Parameters: 3(Long)
+23:12:54 [http-nio-8085-exec-10] DEBUG c.y.m.R.getAllByRoleId - ==> Parameters: 3(Long)
+23:12:54 [http-nio-8085-exec-10] DEBUG c.y.m.R.getAllByRoleId - <==      Total: 0
+23:12:54 [http-nio-8085-exec-10] DEBUG c.y.m.R.getAllByRoleId - <==      Total: 0
+23:12:55 [http-nio-8085-exec-5] DEBUG c.y.m.R.getAllByRoleId - ==>  Preparing: select id, role_id, priority_id, remarks, create_time, create_user, update_time, update_user from t_role_priority where role_id=?
+23:12:55 [http-nio-8085-exec-5] DEBUG c.y.m.R.getAllByRoleId - ==>  Preparing: select id, role_id, priority_id, remarks, create_time, create_user, update_time, update_user from t_role_priority where role_id=?
+23:12:55 [http-nio-8085-exec-5] DEBUG c.y.m.R.getAllByRoleId - ==> Parameters: 5(Long)
+23:12:55 [http-nio-8085-exec-5] DEBUG c.y.m.R.getAllByRoleId - ==> Parameters: 5(Long)
+23:12:55 [http-nio-8085-exec-5] DEBUG c.y.m.R.getAllByRoleId - <==      Total: 3
+23:12:55 [http-nio-8085-exec-5] DEBUG c.y.m.R.getAllByRoleId - <==      Total: 3
+23:12:55 [http-nio-8085-exec-3] DEBUG c.y.m.R.getAllByRoleId - ==>  Preparing: select id, role_id, priority_id, remarks, create_time, create_user, update_time, update_user from t_role_priority where role_id=?
+23:12:55 [http-nio-8085-exec-3] DEBUG c.y.m.R.getAllByRoleId - ==>  Preparing: select id, role_id, priority_id, remarks, create_time, create_user, update_time, update_user from t_role_priority where role_id=?
+23:12:55 [http-nio-8085-exec-3] DEBUG c.y.m.R.getAllByRoleId - ==> Parameters: 8(Long)
+23:12:55 [http-nio-8085-exec-3] DEBUG c.y.m.R.getAllByRoleId - ==> Parameters: 8(Long)
+23:12:55 [http-nio-8085-exec-3] DEBUG c.y.m.R.getAllByRoleId - <==      Total: 0
+23:12:55 [http-nio-8085-exec-3] DEBUG c.y.m.R.getAllByRoleId - <==      Total: 0
+23:12:56 [http-nio-8085-exec-2] DEBUG c.y.m.R.getAllByRoleId - ==>  Preparing: select id, role_id, priority_id, remarks, create_time, create_user, update_time, update_user from t_role_priority where role_id=?
+23:12:56 [http-nio-8085-exec-2] DEBUG c.y.m.R.getAllByRoleId - ==>  Preparing: select id, role_id, priority_id, remarks, create_time, create_user, update_time, update_user from t_role_priority where role_id=?
+23:12:56 [http-nio-8085-exec-2] DEBUG c.y.m.R.getAllByRoleId - ==> Parameters: 9(Long)
+23:12:56 [http-nio-8085-exec-2] DEBUG c.y.m.R.getAllByRoleId - ==> Parameters: 9(Long)
+23:12:56 [http-nio-8085-exec-2] DEBUG c.y.m.R.getAllByRoleId - <==      Total: 13
+23:12:56 [http-nio-8085-exec-2] DEBUG c.y.m.R.getAllByRoleId - <==      Total: 13
+23:12:57 [http-nio-8085-exec-8] DEBUG c.y.m.R.getAllByRoleId - ==>  Preparing: select id, role_id, priority_id, remarks, create_time, create_user, update_time, update_user from t_role_priority where role_id=?
+23:12:57 [http-nio-8085-exec-8] DEBUG c.y.m.R.getAllByRoleId - ==>  Preparing: select id, role_id, priority_id, remarks, create_time, create_user, update_time, update_user from t_role_priority where role_id=?
+23:12:57 [http-nio-8085-exec-8] DEBUG c.y.m.R.getAllByRoleId - ==> Parameters: 1(Long)
+23:12:57 [http-nio-8085-exec-8] DEBUG c.y.m.R.getAllByRoleId - ==> Parameters: 1(Long)
+23:12:57 [http-nio-8085-exec-8] DEBUG c.y.m.R.getAllByRoleId - <==      Total: 16
+23:12:57 [http-nio-8085-exec-8] DEBUG c.y.m.R.getAllByRoleId - <==      Total: 16
+23:12:57 [http-nio-8085-exec-1] DEBUG c.y.m.R.getAllByRoleId - ==>  Preparing: select id, role_id, priority_id, remarks, create_time, create_user, update_time, update_user from t_role_priority where role_id=?
+23:12:57 [http-nio-8085-exec-1] DEBUG c.y.m.R.getAllByRoleId - ==>  Preparing: select id, role_id, priority_id, remarks, create_time, create_user, update_time, update_user from t_role_priority where role_id=?
+23:12:57 [http-nio-8085-exec-1] DEBUG c.y.m.R.getAllByRoleId - ==> Parameters: 2(Long)
+23:12:57 [http-nio-8085-exec-1] DEBUG c.y.m.R.getAllByRoleId - ==> Parameters: 2(Long)
+23:12:57 [http-nio-8085-exec-1] DEBUG c.y.m.R.getAllByRoleId - <==      Total: 2
+23:12:57 [http-nio-8085-exec-1] DEBUG c.y.m.R.getAllByRoleId - <==      Total: 2
+23:23:49 [http-nio-8085-exec-10] DEBUG c.y.mapper.UserMapper.findUsersCount - ==>  Preparing: select count(*) from t_user where 1=1
+23:23:49 [http-nio-8085-exec-10] DEBUG c.y.mapper.UserMapper.findUsersCount - ==>  Preparing: select count(*) from t_user where 1=1
+23:23:49 [http-nio-8085-exec-10] DEBUG c.y.mapper.UserMapper.findUsersCount - ==> Parameters: 
+23:23:49 [http-nio-8085-exec-10] DEBUG c.y.mapper.UserMapper.findUsersCount - ==> Parameters: 
+23:23:50 [http-nio-8085-exec-10] DEBUG c.y.mapper.UserMapper.findUsersCount - <==      Total: 1
+23:23:50 [http-nio-8085-exec-10] DEBUG c.y.mapper.UserMapper.findUsersCount - <==      Total: 1
+23:23:50 [http-nio-8085-exec-10] DEBUG c.y.mapper.UserMapper.findUsers - ==>  Preparing: select id, phone, user_name, passwd, last_login_date, passport, status, third_user_id, email, user_type, create_time, create_user, update_time, update_user, remarks from t_user where 1=1 order by id desc limit ?,?
+23:23:50 [http-nio-8085-exec-10] DEBUG c.y.mapper.UserMapper.findUsers - ==>  Preparing: select id, phone, user_name, passwd, last_login_date, passport, status, third_user_id, email, user_type, create_time, create_user, update_time, update_user, remarks from t_user where 1=1 order by id desc limit ?,?
+23:23:50 [http-nio-8085-exec-10] DEBUG c.y.mapper.UserMapper.findUsers - ==> Parameters: 0(Integer), 20(Integer)
+23:23:50 [http-nio-8085-exec-10] DEBUG c.y.mapper.UserMapper.findUsers - ==> Parameters: 0(Integer), 20(Integer)
+23:23:50 [http-nio-8085-exec-10] DEBUG c.y.mapper.UserMapper.findUsers - <==      Total: 1
+23:23:50 [http-nio-8085-exec-10] DEBUG c.y.mapper.UserMapper.findUsers - <==      Total: 1
+23:30:19 [Thread-24] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+23:30:19 [Thread-24] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+23:30:22 [restartedMain] INFO  com.yidianpuzi.PassportApplication - Starting PassportApplication on LAPTOP-R3E1JBJF with PID 23668 (D:\personal\PassportV2.0\Passport\target\classes started by zhangdengbo in D:\personal\PassportV2.0\Passport)
+23:30:22 [restartedMain] INFO  com.yidianpuzi.PassportApplication - The following profiles are active: dev
+23:30:23 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$943fa28d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+23:30:24 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8085 (http)
+23:30:24 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8085"]
+23:30:24 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+23:30:24 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.14]
+23:30:24 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+23:30:24 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1884 ms
+23:30:24 [restartedMain] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+23:30:24 [restartedMain] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-2} inited
+23:30:24 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+23:30:24 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+23:30:24 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+23:30:24 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+23:30:25 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+23:30:25 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+23:30:25 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+23:30:25 [restartedMain] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: findUsersUsingPOST_1
+23:30:25 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8085"]
+23:30:25 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8085 (http) with context path ''
+23:30:25 [restartedMain] INFO  com.yidianpuzi.PassportApplication - Started PassportApplication in 3.484 seconds (JVM running for 5575.447)
+23:30:25 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+23:37:09 [http-nio-8085-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+23:37:09 [http-nio-8085-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+23:37:09 [http-nio-8085-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 8 ms
+23:37:12 [http-nio-8085-exec-4] DEBUG c.y.mapper.UserMapper.findUsersCount - ==>  Preparing: select count(*) from t_user where 1=1
+23:37:12 [http-nio-8085-exec-4] DEBUG c.y.mapper.UserMapper.findUsersCount - ==>  Preparing: select count(*) from t_user where 1=1
+23:37:12 [http-nio-8085-exec-4] DEBUG c.y.mapper.UserMapper.findUsersCount - ==> Parameters: 
+23:37:12 [http-nio-8085-exec-4] DEBUG c.y.mapper.UserMapper.findUsersCount - ==> Parameters: 
+23:37:12 [http-nio-8085-exec-4] DEBUG c.y.mapper.UserMapper.findUsersCount - <==      Total: 1
+23:37:12 [http-nio-8085-exec-4] DEBUG c.y.mapper.UserMapper.findUsersCount - <==      Total: 1
+23:37:12 [http-nio-8085-exec-4] DEBUG c.y.mapper.UserMapper.findUsers - ==>  Preparing: select id, phone, user_name, passwd, last_login_date, passport, status, third_user_id, email, user_type, create_time, create_user, update_time, update_user, remarks from t_user where 1=1 order by id desc limit ?,?
+23:37:12 [http-nio-8085-exec-4] DEBUG c.y.mapper.UserMapper.findUsers - ==>  Preparing: select id, phone, user_name, passwd, last_login_date, passport, status, third_user_id, email, user_type, create_time, create_user, update_time, update_user, remarks from t_user where 1=1 order by id desc limit ?,?
+23:37:12 [http-nio-8085-exec-4] DEBUG c.y.mapper.UserMapper.findUsers - ==> Parameters: 0(Integer), 20(Integer)
+23:37:12 [http-nio-8085-exec-4] DEBUG c.y.mapper.UserMapper.findUsers - ==> Parameters: 0(Integer), 20(Integer)
+23:37:12 [http-nio-8085-exec-4] DEBUG c.y.mapper.UserMapper.findUsers - <==      Total: 1
+23:37:12 [http-nio-8085-exec-4] DEBUG c.y.mapper.UserMapper.findUsers - <==      Total: 1
+23:38:12 [http-nio-8085-exec-1] DEBUG c.y.mapper.UserMapper.findUsersCount - ==>  Preparing: select count(*) from t_user where 1=1
+23:38:12 [http-nio-8085-exec-1] DEBUG c.y.mapper.UserMapper.findUsersCount - ==>  Preparing: select count(*) from t_user where 1=1
+23:38:12 [http-nio-8085-exec-1] DEBUG c.y.mapper.UserMapper.findUsersCount - ==> Parameters: 
+23:38:12 [http-nio-8085-exec-1] DEBUG c.y.mapper.UserMapper.findUsersCount - ==> Parameters: 
+23:38:12 [http-nio-8085-exec-1] DEBUG c.y.mapper.UserMapper.findUsersCount - <==      Total: 1
+23:38:12 [http-nio-8085-exec-1] DEBUG c.y.mapper.UserMapper.findUsersCount - <==      Total: 1
+23:38:12 [http-nio-8085-exec-1] DEBUG c.y.mapper.UserMapper.findUsers - ==>  Preparing: select id, phone, user_name, passwd, last_login_date, passport, status, third_user_id, email, user_type, create_time, create_user, update_time, update_user, remarks from t_user where 1=1 order by id desc limit ?,?
+23:38:12 [http-nio-8085-exec-1] DEBUG c.y.mapper.UserMapper.findUsers - ==>  Preparing: select id, phone, user_name, passwd, last_login_date, passport, status, third_user_id, email, user_type, create_time, create_user, update_time, update_user, remarks from t_user where 1=1 order by id desc limit ?,?
+23:38:12 [http-nio-8085-exec-1] DEBUG c.y.mapper.UserMapper.findUsers - ==> Parameters: 0(Integer), 20(Integer)
+23:38:12 [http-nio-8085-exec-1] DEBUG c.y.mapper.UserMapper.findUsers - ==> Parameters: 0(Integer), 20(Integer)
+23:38:12 [http-nio-8085-exec-1] DEBUG c.y.mapper.UserMapper.findUsers - <==      Total: 1
+23:38:12 [http-nio-8085-exec-1] DEBUG c.y.mapper.UserMapper.findUsers - <==      Total: 1
+23:38:48 [http-nio-8085-exec-3] DEBUG c.y.mapper.UserMapper.findUsersCount - ==>  Preparing: select count(*) from t_user where 1=1
+23:38:48 [http-nio-8085-exec-3] DEBUG c.y.mapper.UserMapper.findUsersCount - ==>  Preparing: select count(*) from t_user where 1=1
+23:38:48 [http-nio-8085-exec-3] DEBUG c.y.mapper.UserMapper.findUsersCount - ==> Parameters: 
+23:38:48 [http-nio-8085-exec-3] DEBUG c.y.mapper.UserMapper.findUsersCount - ==> Parameters: 
+23:38:48 [http-nio-8085-exec-3] DEBUG c.y.mapper.UserMapper.findUsersCount - <==      Total: 1
+23:38:48 [http-nio-8085-exec-3] DEBUG c.y.mapper.UserMapper.findUsersCount - <==      Total: 1
+23:38:48 [http-nio-8085-exec-3] DEBUG c.y.mapper.UserMapper.findUsers - ==>  Preparing: select id, phone, user_name, passwd, last_login_date, passport, status, third_user_id, email, user_type, create_time, create_user, update_time, update_user, remarks from t_user where 1=1 order by id desc limit ?,?
+23:38:48 [http-nio-8085-exec-3] DEBUG c.y.mapper.UserMapper.findUsers - ==>  Preparing: select id, phone, user_name, passwd, last_login_date, passport, status, third_user_id, email, user_type, create_time, create_user, update_time, update_user, remarks from t_user where 1=1 order by id desc limit ?,?
+23:38:48 [http-nio-8085-exec-3] DEBUG c.y.mapper.UserMapper.findUsers - ==> Parameters: 0(Integer), 20(Integer)
+23:38:48 [http-nio-8085-exec-3] DEBUG c.y.mapper.UserMapper.findUsers - ==> Parameters: 0(Integer), 20(Integer)
+23:38:48 [http-nio-8085-exec-3] DEBUG c.y.mapper.UserMapper.findUsers - <==      Total: 1
+23:38:48 [http-nio-8085-exec-3] DEBUG c.y.mapper.UserMapper.findUsers - <==      Total: 1
+23:39:14 [http-nio-8085-exec-8] DEBUG c.y.mapper.UserMapper.findUsersCount - ==>  Preparing: select count(*) from t_user where 1=1
+23:39:14 [http-nio-8085-exec-8] DEBUG c.y.mapper.UserMapper.findUsersCount - ==>  Preparing: select count(*) from t_user where 1=1
+23:39:14 [http-nio-8085-exec-8] DEBUG c.y.mapper.UserMapper.findUsersCount - ==> Parameters: 
+23:39:14 [http-nio-8085-exec-8] DEBUG c.y.mapper.UserMapper.findUsersCount - ==> Parameters: 
+23:39:14 [http-nio-8085-exec-8] DEBUG c.y.mapper.UserMapper.findUsersCount - <==      Total: 1
+23:39:14 [http-nio-8085-exec-8] DEBUG c.y.mapper.UserMapper.findUsersCount - <==      Total: 1
+23:39:14 [http-nio-8085-exec-8] DEBUG c.y.mapper.UserMapper.findUsers - ==>  Preparing: select id, phone, user_name, passwd, last_login_date, passport, status, third_user_id, email, user_type, create_time, create_user, update_time, update_user, remarks from t_user where 1=1 order by id desc limit ?,?
+23:39:14 [http-nio-8085-exec-8] DEBUG c.y.mapper.UserMapper.findUsers - ==>  Preparing: select id, phone, user_name, passwd, last_login_date, passport, status, third_user_id, email, user_type, create_time, create_user, update_time, update_user, remarks from t_user where 1=1 order by id desc limit ?,?
+23:39:14 [http-nio-8085-exec-8] DEBUG c.y.mapper.UserMapper.findUsers - ==> Parameters: 0(Integer), 20(Integer)
+23:39:14 [http-nio-8085-exec-8] DEBUG c.y.mapper.UserMapper.findUsers - ==> Parameters: 0(Integer), 20(Integer)
+23:39:14 [http-nio-8085-exec-8] DEBUG c.y.mapper.UserMapper.findUsers - <==      Total: 1
+23:39:14 [http-nio-8085-exec-8] DEBUG c.y.mapper.UserMapper.findUsers - <==      Total: 1
+23:39:59 [http-nio-8085-exec-4] DEBUG c.y.mapper.UserMapper.findUsersCount - ==>  Preparing: select count(*) from t_user where 1=1
+23:39:59 [http-nio-8085-exec-4] DEBUG c.y.mapper.UserMapper.findUsersCount - ==>  Preparing: select count(*) from t_user where 1=1
+23:39:59 [http-nio-8085-exec-4] DEBUG c.y.mapper.UserMapper.findUsersCount - ==> Parameters: 
+23:39:59 [http-nio-8085-exec-4] DEBUG c.y.mapper.UserMapper.findUsersCount - ==> Parameters: 
+23:39:59 [http-nio-8085-exec-4] DEBUG c.y.mapper.UserMapper.findUsersCount - <==      Total: 1
+23:39:59 [http-nio-8085-exec-4] DEBUG c.y.mapper.UserMapper.findUsersCount - <==      Total: 1
+23:39:59 [http-nio-8085-exec-4] DEBUG c.y.mapper.UserMapper.findUsers - ==>  Preparing: select id, phone, user_name, passwd, last_login_date, passport, status, third_user_id, email, user_type, create_time, create_user, update_time, update_user, remarks from t_user where 1=1 order by id desc limit ?,?
+23:39:59 [http-nio-8085-exec-4] DEBUG c.y.mapper.UserMapper.findUsers - ==>  Preparing: select id, phone, user_name, passwd, last_login_date, passport, status, third_user_id, email, user_type, create_time, create_user, update_time, update_user, remarks from t_user where 1=1 order by id desc limit ?,?
+23:39:59 [http-nio-8085-exec-4] DEBUG c.y.mapper.UserMapper.findUsers - ==> Parameters: 0(Integer), 20(Integer)
+23:39:59 [http-nio-8085-exec-4] DEBUG c.y.mapper.UserMapper.findUsers - ==> Parameters: 0(Integer), 20(Integer)
+23:39:59 [http-nio-8085-exec-4] DEBUG c.y.mapper.UserMapper.findUsers - <==      Total: 1
+23:39:59 [http-nio-8085-exec-4] DEBUG c.y.mapper.UserMapper.findUsers - <==      Total: 1
+23:40:27 [http-nio-8085-exec-2] DEBUG c.y.mapper.UserMapper.findUsersCount - ==>  Preparing: select count(*) from t_user where 1=1
+23:40:27 [http-nio-8085-exec-2] DEBUG c.y.mapper.UserMapper.findUsersCount - ==>  Preparing: select count(*) from t_user where 1=1
+23:40:27 [http-nio-8085-exec-2] DEBUG c.y.mapper.UserMapper.findUsersCount - ==> Parameters: 
+23:40:27 [http-nio-8085-exec-2] DEBUG c.y.mapper.UserMapper.findUsersCount - ==> Parameters: 
+23:40:27 [http-nio-8085-exec-2] DEBUG c.y.mapper.UserMapper.findUsersCount - <==      Total: 1
+23:40:27 [http-nio-8085-exec-2] DEBUG c.y.mapper.UserMapper.findUsersCount - <==      Total: 1
+23:40:27 [http-nio-8085-exec-2] DEBUG c.y.mapper.UserMapper.findUsers - ==>  Preparing: select id, phone, user_name, passwd, last_login_date, passport, status, third_user_id, email, user_type, create_time, create_user, update_time, update_user, remarks from t_user where 1=1 order by id desc limit ?,?
+23:40:27 [http-nio-8085-exec-2] DEBUG c.y.mapper.UserMapper.findUsers - ==>  Preparing: select id, phone, user_name, passwd, last_login_date, passport, status, third_user_id, email, user_type, create_time, create_user, update_time, update_user, remarks from t_user where 1=1 order by id desc limit ?,?
+23:40:27 [http-nio-8085-exec-2] DEBUG c.y.mapper.UserMapper.findUsers - ==> Parameters: 0(Integer), 20(Integer)
+23:40:27 [http-nio-8085-exec-2] DEBUG c.y.mapper.UserMapper.findUsers - ==> Parameters: 0(Integer), 20(Integer)
+23:40:27 [http-nio-8085-exec-2] DEBUG c.y.mapper.UserMapper.findUsers - <==      Total: 1
+23:40:27 [http-nio-8085-exec-2] DEBUG c.y.mapper.UserMapper.findUsers - <==      Total: 1
+23:40:53 [http-nio-8085-exec-10] DEBUG c.y.mapper.UserMapper.findUsersCount - ==>  Preparing: select count(*) from t_user where 1=1
+23:40:53 [http-nio-8085-exec-10] DEBUG c.y.mapper.UserMapper.findUsersCount - ==>  Preparing: select count(*) from t_user where 1=1
+23:40:53 [http-nio-8085-exec-10] DEBUG c.y.mapper.UserMapper.findUsersCount - ==> Parameters: 
+23:40:53 [http-nio-8085-exec-10] DEBUG c.y.mapper.UserMapper.findUsersCount - ==> Parameters: 
+23:40:53 [http-nio-8085-exec-10] DEBUG c.y.mapper.UserMapper.findUsersCount - <==      Total: 1
+23:40:53 [http-nio-8085-exec-10] DEBUG c.y.mapper.UserMapper.findUsersCount - <==      Total: 1
+23:40:53 [http-nio-8085-exec-10] DEBUG c.y.mapper.UserMapper.findUsers - ==>  Preparing: select id, phone, user_name, passwd, last_login_date, passport, status, third_user_id, email, user_type, create_time, create_user, update_time, update_user, remarks from t_user where 1=1 order by id desc limit ?,?
+23:40:53 [http-nio-8085-exec-10] DEBUG c.y.mapper.UserMapper.findUsers - ==>  Preparing: select id, phone, user_name, passwd, last_login_date, passport, status, third_user_id, email, user_type, create_time, create_user, update_time, update_user, remarks from t_user where 1=1 order by id desc limit ?,?
+23:40:53 [http-nio-8085-exec-10] DEBUG c.y.mapper.UserMapper.findUsers - ==> Parameters: 0(Integer), 20(Integer)
+23:40:53 [http-nio-8085-exec-10] DEBUG c.y.mapper.UserMapper.findUsers - ==> Parameters: 0(Integer), 20(Integer)
+23:40:53 [http-nio-8085-exec-10] DEBUG c.y.mapper.UserMapper.findUsers - <==      Total: 1
+23:40:53 [http-nio-8085-exec-10] DEBUG c.y.mapper.UserMapper.findUsers - <==      Total: 1
+23:40:58 [http-nio-8085-exec-6] DEBUG c.y.mapper.UserMapper.findUsersCount - ==>  Preparing: select count(*) from t_user where 1=1
+23:40:58 [http-nio-8085-exec-6] DEBUG c.y.mapper.UserMapper.findUsersCount - ==>  Preparing: select count(*) from t_user where 1=1
+23:40:58 [http-nio-8085-exec-6] DEBUG c.y.mapper.UserMapper.findUsersCount - ==> Parameters: 
+23:40:58 [http-nio-8085-exec-6] DEBUG c.y.mapper.UserMapper.findUsersCount - ==> Parameters: 
+23:40:58 [http-nio-8085-exec-6] DEBUG c.y.mapper.UserMapper.findUsersCount - <==      Total: 1
+23:40:58 [http-nio-8085-exec-6] DEBUG c.y.mapper.UserMapper.findUsersCount - <==      Total: 1
+23:40:58 [http-nio-8085-exec-6] DEBUG c.y.mapper.UserMapper.findUsers - ==>  Preparing: select id, phone, user_name, passwd, last_login_date, passport, status, third_user_id, email, user_type, create_time, create_user, update_time, update_user, remarks from t_user where 1=1 order by id desc limit ?,?
+23:40:58 [http-nio-8085-exec-6] DEBUG c.y.mapper.UserMapper.findUsers - ==>  Preparing: select id, phone, user_name, passwd, last_login_date, passport, status, third_user_id, email, user_type, create_time, create_user, update_time, update_user, remarks from t_user where 1=1 order by id desc limit ?,?
+23:40:58 [http-nio-8085-exec-6] DEBUG c.y.mapper.UserMapper.findUsers - ==> Parameters: 0(Integer), 20(Integer)
+23:40:58 [http-nio-8085-exec-6] DEBUG c.y.mapper.UserMapper.findUsers - ==> Parameters: 0(Integer), 20(Integer)
+23:40:58 [http-nio-8085-exec-6] DEBUG c.y.mapper.UserMapper.findUsers - <==      Total: 1
+23:40:58 [http-nio-8085-exec-6] DEBUG c.y.mapper.UserMapper.findUsers - <==      Total: 1
+23:41:47 [http-nio-8085-exec-7] DEBUG c.y.mapper.UserMapper.findUsersCount - ==>  Preparing: select count(*) from t_user where 1=1
+23:41:47 [http-nio-8085-exec-7] DEBUG c.y.mapper.UserMapper.findUsersCount - ==>  Preparing: select count(*) from t_user where 1=1
+23:41:47 [http-nio-8085-exec-7] DEBUG c.y.mapper.UserMapper.findUsersCount - ==> Parameters: 
+23:41:47 [http-nio-8085-exec-7] DEBUG c.y.mapper.UserMapper.findUsersCount - ==> Parameters: 
+23:41:47 [http-nio-8085-exec-7] DEBUG c.y.mapper.UserMapper.findUsersCount - <==      Total: 1
+23:41:47 [http-nio-8085-exec-7] DEBUG c.y.mapper.UserMapper.findUsersCount - <==      Total: 1
+23:41:47 [http-nio-8085-exec-7] DEBUG c.y.mapper.UserMapper.findUsers - ==>  Preparing: select id, phone, user_name, passwd, last_login_date, passport, status, third_user_id, email, user_type, create_time, create_user, update_time, update_user, remarks from t_user where 1=1 order by id desc limit ?,?
+23:41:47 [http-nio-8085-exec-7] DEBUG c.y.mapper.UserMapper.findUsers - ==>  Preparing: select id, phone, user_name, passwd, last_login_date, passport, status, third_user_id, email, user_type, create_time, create_user, update_time, update_user, remarks from t_user where 1=1 order by id desc limit ?,?
+23:41:47 [http-nio-8085-exec-7] DEBUG c.y.mapper.UserMapper.findUsers - ==> Parameters: 0(Integer), 20(Integer)
+23:41:47 [http-nio-8085-exec-7] DEBUG c.y.mapper.UserMapper.findUsers - ==> Parameters: 0(Integer), 20(Integer)
+23:41:47 [http-nio-8085-exec-7] DEBUG c.y.mapper.UserMapper.findUsers - <==      Total: 1
+23:41:47 [http-nio-8085-exec-7] DEBUG c.y.mapper.UserMapper.findUsers - <==      Total: 1
+23:42:22 [http-nio-8085-exec-1] DEBUG c.y.mapper.UserMapper.findUsersCount - ==>  Preparing: select count(*) from t_user where 1=1
+23:42:22 [http-nio-8085-exec-1] DEBUG c.y.mapper.UserMapper.findUsersCount - ==>  Preparing: select count(*) from t_user where 1=1
+23:42:22 [http-nio-8085-exec-1] DEBUG c.y.mapper.UserMapper.findUsersCount - ==> Parameters: 
+23:42:22 [http-nio-8085-exec-1] DEBUG c.y.mapper.UserMapper.findUsersCount - ==> Parameters: 
+23:42:22 [http-nio-8085-exec-1] DEBUG c.y.mapper.UserMapper.findUsersCount - <==      Total: 1
+23:42:22 [http-nio-8085-exec-1] DEBUG c.y.mapper.UserMapper.findUsersCount - <==      Total: 1
+23:42:22 [http-nio-8085-exec-1] DEBUG c.y.mapper.UserMapper.findUsers - ==>  Preparing: select id, phone, user_name, passwd, last_login_date, passport, status, third_user_id, email, user_type, create_time, create_user, update_time, update_user, remarks from t_user where 1=1 order by id desc limit ?,?
+23:42:22 [http-nio-8085-exec-1] DEBUG c.y.mapper.UserMapper.findUsers - ==>  Preparing: select id, phone, user_name, passwd, last_login_date, passport, status, third_user_id, email, user_type, create_time, create_user, update_time, update_user, remarks from t_user where 1=1 order by id desc limit ?,?
+23:42:22 [http-nio-8085-exec-1] DEBUG c.y.mapper.UserMapper.findUsers - ==> Parameters: 0(Integer), 20(Integer)
+23:42:22 [http-nio-8085-exec-1] DEBUG c.y.mapper.UserMapper.findUsers - ==> Parameters: 0(Integer), 20(Integer)
+23:42:22 [http-nio-8085-exec-1] DEBUG c.y.mapper.UserMapper.findUsers - <==      Total: 1
+23:42:22 [http-nio-8085-exec-1] DEBUG c.y.mapper.UserMapper.findUsers - <==      Total: 1
+23:44:19 [http-nio-8085-exec-7] DEBUG c.y.mapper.UserMapper.findUsersCount - ==>  Preparing: select count(*) from t_user where 1=1
+23:44:19 [http-nio-8085-exec-7] DEBUG c.y.mapper.UserMapper.findUsersCount - ==>  Preparing: select count(*) from t_user where 1=1
+23:44:19 [http-nio-8085-exec-7] DEBUG c.y.mapper.UserMapper.findUsersCount - ==> Parameters: 
+23:44:19 [http-nio-8085-exec-7] DEBUG c.y.mapper.UserMapper.findUsersCount - ==> Parameters: 
+23:44:19 [http-nio-8085-exec-7] DEBUG c.y.mapper.UserMapper.findUsersCount - <==      Total: 1
+23:44:19 [http-nio-8085-exec-7] DEBUG c.y.mapper.UserMapper.findUsersCount - <==      Total: 1
+23:44:19 [http-nio-8085-exec-7] DEBUG c.y.mapper.UserMapper.findUsers - ==>  Preparing: select id, phone, user_name, passwd, last_login_date, passport, status, third_user_id, email, user_type, create_time, create_user, update_time, update_user, remarks from t_user where 1=1 order by id desc limit ?,?
+23:44:19 [http-nio-8085-exec-7] DEBUG c.y.mapper.UserMapper.findUsers - ==>  Preparing: select id, phone, user_name, passwd, last_login_date, passport, status, third_user_id, email, user_type, create_time, create_user, update_time, update_user, remarks from t_user where 1=1 order by id desc limit ?,?
+23:44:19 [http-nio-8085-exec-7] DEBUG c.y.mapper.UserMapper.findUsers - ==> Parameters: 0(Integer), 20(Integer)
+23:44:19 [http-nio-8085-exec-7] DEBUG c.y.mapper.UserMapper.findUsers - ==> Parameters: 0(Integer), 20(Integer)
+23:44:19 [http-nio-8085-exec-7] DEBUG c.y.mapper.UserMapper.findUsers - <==      Total: 1
+23:44:19 [http-nio-8085-exec-7] DEBUG c.y.mapper.UserMapper.findUsers - <==      Total: 1
+23:46:12 [http-nio-8085-exec-5] DEBUG c.y.mapper.UserMapper.findUsersCount - ==>  Preparing: select count(*) from t_user where 1=1
+23:46:12 [http-nio-8085-exec-5] DEBUG c.y.mapper.UserMapper.findUsersCount - ==>  Preparing: select count(*) from t_user where 1=1
+23:46:12 [http-nio-8085-exec-5] DEBUG c.y.mapper.UserMapper.findUsersCount - ==> Parameters: 
+23:46:12 [http-nio-8085-exec-5] DEBUG c.y.mapper.UserMapper.findUsersCount - ==> Parameters: 
+23:46:12 [http-nio-8085-exec-5] DEBUG c.y.mapper.UserMapper.findUsersCount - <==      Total: 1
+23:46:12 [http-nio-8085-exec-5] DEBUG c.y.mapper.UserMapper.findUsersCount - <==      Total: 1
+23:46:12 [http-nio-8085-exec-5] DEBUG c.y.mapper.UserMapper.findUsers - ==>  Preparing: select id, phone, user_name, passwd, last_login_date, passport, status, third_user_id, email, user_type, create_time, create_user, update_time, update_user, remarks from t_user where 1=1 order by id desc limit ?,?
+23:46:12 [http-nio-8085-exec-5] DEBUG c.y.mapper.UserMapper.findUsers - ==>  Preparing: select id, phone, user_name, passwd, last_login_date, passport, status, third_user_id, email, user_type, create_time, create_user, update_time, update_user, remarks from t_user where 1=1 order by id desc limit ?,?
+23:46:12 [http-nio-8085-exec-5] DEBUG c.y.mapper.UserMapper.findUsers - ==> Parameters: 0(Integer), 20(Integer)
+23:46:12 [http-nio-8085-exec-5] DEBUG c.y.mapper.UserMapper.findUsers - ==> Parameters: 0(Integer), 20(Integer)
+23:46:12 [http-nio-8085-exec-5] DEBUG c.y.mapper.UserMapper.findUsers - <==      Total: 1
+23:46:12 [http-nio-8085-exec-5] DEBUG c.y.mapper.UserMapper.findUsers - <==      Total: 1
+23:49:40 [http-nio-8085-exec-4] DEBUG c.y.mapper.UserMapper.findUsersCount - ==>  Preparing: select count(*) from t_user where 1=1
+23:49:40 [http-nio-8085-exec-4] DEBUG c.y.mapper.UserMapper.findUsersCount - ==>  Preparing: select count(*) from t_user where 1=1
+23:49:40 [http-nio-8085-exec-4] DEBUG c.y.mapper.UserMapper.findUsersCount - ==> Parameters: 
+23:49:40 [http-nio-8085-exec-4] DEBUG c.y.mapper.UserMapper.findUsersCount - ==> Parameters: 
+23:49:40 [http-nio-8085-exec-4] DEBUG c.y.mapper.UserMapper.findUsersCount - <==      Total: 1
+23:49:40 [http-nio-8085-exec-4] DEBUG c.y.mapper.UserMapper.findUsersCount - <==      Total: 1
+23:49:40 [http-nio-8085-exec-4] DEBUG c.y.mapper.UserMapper.findUsers - ==>  Preparing: select id, phone, user_name, passwd, last_login_date, passport, status, third_user_id, email, user_type, create_time, create_user, update_time, update_user, remarks from t_user where 1=1 order by id desc limit ?,?
+23:49:40 [http-nio-8085-exec-4] DEBUG c.y.mapper.UserMapper.findUsers - ==>  Preparing: select id, phone, user_name, passwd, last_login_date, passport, status, third_user_id, email, user_type, create_time, create_user, update_time, update_user, remarks from t_user where 1=1 order by id desc limit ?,?
+23:49:40 [http-nio-8085-exec-4] DEBUG c.y.mapper.UserMapper.findUsers - ==> Parameters: 0(Integer), 20(Integer)
+23:49:40 [http-nio-8085-exec-4] DEBUG c.y.mapper.UserMapper.findUsers - ==> Parameters: 0(Integer), 20(Integer)
+23:49:40 [http-nio-8085-exec-4] DEBUG c.y.mapper.UserMapper.findUsers - <==      Total: 1
+23:49:40 [http-nio-8085-exec-4] DEBUG c.y.mapper.UserMapper.findUsers - <==      Total: 1
+23:51:21 [http-nio-8085-exec-5] DEBUG c.y.mapper.UserMapper.findUsersCount - ==>  Preparing: select count(*) from t_user where 1=1
+23:51:21 [http-nio-8085-exec-5] DEBUG c.y.mapper.UserMapper.findUsersCount - ==>  Preparing: select count(*) from t_user where 1=1
+23:51:21 [http-nio-8085-exec-5] DEBUG c.y.mapper.UserMapper.findUsersCount - ==> Parameters: 
+23:51:21 [http-nio-8085-exec-5] DEBUG c.y.mapper.UserMapper.findUsersCount - ==> Parameters: 
+23:51:21 [http-nio-8085-exec-5] DEBUG c.y.mapper.UserMapper.findUsersCount - <==      Total: 1
+23:51:21 [http-nio-8085-exec-5] DEBUG c.y.mapper.UserMapper.findUsersCount - <==      Total: 1
+23:51:21 [http-nio-8085-exec-5] DEBUG c.y.mapper.UserMapper.findUsers - ==>  Preparing: select id, phone, user_name, passwd, last_login_date, passport, status, third_user_id, email, user_type, create_time, create_user, update_time, update_user, remarks from t_user where 1=1 order by id desc limit ?,?
+23:51:21 [http-nio-8085-exec-5] DEBUG c.y.mapper.UserMapper.findUsers - ==>  Preparing: select id, phone, user_name, passwd, last_login_date, passport, status, third_user_id, email, user_type, create_time, create_user, update_time, update_user, remarks from t_user where 1=1 order by id desc limit ?,?
+23:51:21 [http-nio-8085-exec-5] DEBUG c.y.mapper.UserMapper.findUsers - ==> Parameters: 0(Integer), 20(Integer)
+23:51:21 [http-nio-8085-exec-5] DEBUG c.y.mapper.UserMapper.findUsers - ==> Parameters: 0(Integer), 20(Integer)
+23:51:21 [http-nio-8085-exec-5] DEBUG c.y.mapper.UserMapper.findUsers - <==      Total: 1
+23:51:21 [http-nio-8085-exec-5] DEBUG c.y.mapper.UserMapper.findUsers - <==      Total: 1
+23:51:29 [http-nio-8085-exec-4] DEBUG c.y.mapper.UserMapper.insert - ==>  Preparing: insert into t_user (id, phone, user_name, passwd, last_login_date, passport, status, third_user_id, email, user_type, create_time, create_user, update_time, update_user, remarks ) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+23:51:29 [http-nio-8085-exec-4] DEBUG c.y.mapper.UserMapper.insert - ==>  Preparing: insert into t_user (id, phone, user_name, passwd, last_login_date, passport, status, third_user_id, email, user_type, create_time, create_user, update_time, update_user, remarks ) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+23:51:29 [http-nio-8085-exec-4] DEBUG c.y.mapper.UserMapper.insert - ==> Parameters: null, 1(String), 1(String), null, null, 1(String), 1(Integer), null, 1(String), 1(Byte), null, null, null, null, 1(String)
+23:51:29 [http-nio-8085-exec-4] DEBUG c.y.mapper.UserMapper.insert - ==> Parameters: null, 1(String), 1(String), null, null, 1(String), 1(Integer), null, 1(String), 1(Byte), null, null, null, null, 1(String)
+23:51:30 [http-nio-8085-exec-4] DEBUG c.y.mapper.UserMapper.insert - <==    Updates: 1
+23:51:30 [http-nio-8085-exec-4] DEBUG c.y.mapper.UserMapper.insert - <==    Updates: 1
+23:51:30 [http-nio-8085-exec-2] DEBUG c.y.mapper.UserMapper.findUsersCount - ==>  Preparing: select count(*) from t_user where 1=1
+23:51:30 [http-nio-8085-exec-2] DEBUG c.y.mapper.UserMapper.findUsersCount - ==>  Preparing: select count(*) from t_user where 1=1
+23:51:30 [http-nio-8085-exec-2] DEBUG c.y.mapper.UserMapper.findUsersCount - ==> Parameters: 
+23:51:30 [http-nio-8085-exec-2] DEBUG c.y.mapper.UserMapper.findUsersCount - ==> Parameters: 
+23:51:30 [http-nio-8085-exec-2] DEBUG c.y.mapper.UserMapper.findUsersCount - <==      Total: 1
+23:51:30 [http-nio-8085-exec-2] DEBUG c.y.mapper.UserMapper.findUsersCount - <==      Total: 1
+23:51:30 [http-nio-8085-exec-2] DEBUG c.y.mapper.UserMapper.findUsers - ==>  Preparing: select id, phone, user_name, passwd, last_login_date, passport, status, third_user_id, email, user_type, create_time, create_user, update_time, update_user, remarks from t_user where 1=1 order by id desc limit ?,?
+23:51:30 [http-nio-8085-exec-2] DEBUG c.y.mapper.UserMapper.findUsers - ==>  Preparing: select id, phone, user_name, passwd, last_login_date, passport, status, third_user_id, email, user_type, create_time, create_user, update_time, update_user, remarks from t_user where 1=1 order by id desc limit ?,?
+23:51:30 [http-nio-8085-exec-2] DEBUG c.y.mapper.UserMapper.findUsers - ==> Parameters: 0(Integer), 20(Integer)
+23:51:30 [http-nio-8085-exec-2] DEBUG c.y.mapper.UserMapper.findUsers - ==> Parameters: 0(Integer), 20(Integer)
+23:51:30 [http-nio-8085-exec-2] DEBUG c.y.mapper.UserMapper.findUsers - <==      Total: 2
+23:51:30 [http-nio-8085-exec-2] DEBUG c.y.mapper.UserMapper.findUsers - <==      Total: 2
+23:51:46 [http-nio-8085-exec-7] DEBUG c.y.mapper.RoleMapper.findRolesCount - ==>  Preparing: select count(*) from t_role
+23:51:46 [http-nio-8085-exec-7] DEBUG c.y.mapper.RoleMapper.findRolesCount - ==>  Preparing: select count(*) from t_role
+23:51:46 [http-nio-8085-exec-7] DEBUG c.y.mapper.RoleMapper.findRolesCount - ==> Parameters: 
+23:51:46 [http-nio-8085-exec-7] DEBUG c.y.mapper.RoleMapper.findRolesCount - ==> Parameters: 
+23:51:46 [http-nio-8085-exec-7] DEBUG c.y.mapper.RoleMapper.findRolesCount - <==      Total: 1
+23:51:46 [http-nio-8085-exec-7] DEBUG c.y.mapper.RoleMapper.findRolesCount - <==      Total: 1
+23:51:46 [http-nio-8085-exec-6] DEBUG c.y.m.P.findAllPriorityCount - ==>  Preparing: select count(*) from t_priority
+23:51:46 [http-nio-8085-exec-6] DEBUG c.y.m.P.findAllPriorityCount - ==>  Preparing: select count(*) from t_priority
+23:51:46 [http-nio-8085-exec-6] DEBUG c.y.m.P.findAllPriorityCount - ==> Parameters: 
+23:51:46 [http-nio-8085-exec-6] DEBUG c.y.m.P.findAllPriorityCount - ==> Parameters: 
+23:51:46 [http-nio-8085-exec-6] DEBUG c.y.m.P.findAllPriorityCount - <==      Total: 1
+23:51:46 [http-nio-8085-exec-6] DEBUG c.y.m.P.findAllPriorityCount - <==      Total: 1
+23:51:46 [http-nio-8085-exec-7] DEBUG c.y.mapper.RoleMapper.findRoles - ==>  Preparing: select id, role_name, create_time, create_user, update_user, update_time, remarks from t_role order by id desc limit ?,?
+23:51:46 [http-nio-8085-exec-7] DEBUG c.y.mapper.RoleMapper.findRoles - ==>  Preparing: select id, role_name, create_time, create_user, update_user, update_time, remarks from t_role order by id desc limit ?,?
+23:51:46 [http-nio-8085-exec-7] DEBUG c.y.mapper.RoleMapper.findRoles - ==> Parameters: 0(Integer), 20(Integer)
+23:51:46 [http-nio-8085-exec-7] DEBUG c.y.mapper.RoleMapper.findRoles - ==> Parameters: 0(Integer), 20(Integer)
+23:51:46 [http-nio-8085-exec-7] DEBUG c.y.mapper.RoleMapper.findRoles - <==      Total: 6
+23:51:46 [http-nio-8085-exec-7] DEBUG c.y.mapper.RoleMapper.findRoles - <==      Total: 6
+23:51:46 [http-nio-8085-exec-6] DEBUG c.y.m.PriorityMapper.findAllPriority - ==>  Preparing: select id, priority_name, priorty_url, type, parent, remarks, create_time,create_user,update_time,update_user from t_priority
+23:51:46 [http-nio-8085-exec-6] DEBUG c.y.m.PriorityMapper.findAllPriority - ==>  Preparing: select id, priority_name, priorty_url, type, parent, remarks, create_time,create_user,update_time,update_user from t_priority
+23:51:46 [http-nio-8085-exec-6] DEBUG c.y.m.PriorityMapper.findAllPriority - ==> Parameters: 
+23:51:46 [http-nio-8085-exec-6] DEBUG c.y.m.PriorityMapper.findAllPriority - ==> Parameters: 
+23:51:46 [http-nio-8085-exec-6] DEBUG c.y.m.PriorityMapper.findAllPriority - <==      Total: 16
+23:51:46 [http-nio-8085-exec-6] DEBUG c.y.m.PriorityMapper.findAllPriority - <==      Total: 16
+23:51:48 [http-nio-8085-exec-2] DEBUG c.y.m.P.findAllPriorityCount - ==>  Preparing: select count(*) from t_priority
+23:51:48 [http-nio-8085-exec-2] DEBUG c.y.m.P.findAllPriorityCount - ==>  Preparing: select count(*) from t_priority
+23:51:48 [http-nio-8085-exec-2] DEBUG c.y.m.P.findAllPriorityCount - ==> Parameters: 
+23:51:48 [http-nio-8085-exec-2] DEBUG c.y.m.P.findAllPriorityCount - ==> Parameters: 
+23:51:48 [http-nio-8085-exec-2] DEBUG c.y.m.P.findAllPriorityCount - <==      Total: 1
+23:51:48 [http-nio-8085-exec-2] DEBUG c.y.m.P.findAllPriorityCount - <==      Total: 1
+23:51:48 [http-nio-8085-exec-2] DEBUG c.y.m.PriorityMapper.findAllPriority - ==>  Preparing: select id, priority_name, priorty_url, type, parent, remarks, create_time,create_user,update_time,update_user from t_priority
+23:51:48 [http-nio-8085-exec-2] DEBUG c.y.m.PriorityMapper.findAllPriority - ==>  Preparing: select id, priority_name, priorty_url, type, parent, remarks, create_time,create_user,update_time,update_user from t_priority
+23:51:48 [http-nio-8085-exec-2] DEBUG c.y.m.PriorityMapper.findAllPriority - ==> Parameters: 
+23:51:48 [http-nio-8085-exec-2] DEBUG c.y.m.PriorityMapper.findAllPriority - ==> Parameters: 
+23:51:48 [http-nio-8085-exec-2] DEBUG c.y.m.PriorityMapper.findAllPriority - <==      Total: 16
+23:51:48 [http-nio-8085-exec-2] DEBUG c.y.m.PriorityMapper.findAllPriority - <==      Total: 16
+23:55:07 [http-nio-8085-exec-8] DEBUG c.y.m.R.getAllByRoleId - ==>  Preparing: select id, role_id, priority_id, remarks, create_time, create_user, update_time, update_user from t_role_priority where role_id=?
+23:55:07 [http-nio-8085-exec-8] DEBUG c.y.m.R.getAllByRoleId - ==>  Preparing: select id, role_id, priority_id, remarks, create_time, create_user, update_time, update_user from t_role_priority where role_id=?
+23:55:07 [http-nio-8085-exec-8] DEBUG c.y.m.R.getAllByRoleId - ==> Parameters: 5(Long)
+23:55:07 [http-nio-8085-exec-8] DEBUG c.y.m.R.getAllByRoleId - ==> Parameters: 5(Long)
+23:55:07 [http-nio-8085-exec-8] DEBUG c.y.m.R.getAllByRoleId - <==      Total: 3
+23:55:07 [http-nio-8085-exec-8] DEBUG c.y.m.R.getAllByRoleId - <==      Total: 3
