@@ -1,5 +1,6 @@
 package com.yidianpuzi.controller;
 
+import com.yidianpuzi.Proxy.UserProxy;
 import com.yidianpuzi.constants.PassportStatus;
 import com.yidianpuzi.domain.Passport;
 import com.yidianpuzi.service.PassportService;
@@ -23,6 +24,9 @@ public class LoginController {
 
     @Resource
     private PassportService passportService;
+
+    @Resource
+    private UserProxy userProxy;
 
 
     @RequestMapping(value = "login", method = {RequestMethod.GET, RequestMethod.POST})

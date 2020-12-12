@@ -59,4 +59,6 @@ public interface UserMapper {
 
 
     int findUsersCount(@Param("userName")String userName, @Param("phone")String phone, @Param("passport")String passport);
+
+    User getUserByPassportAndPassword(@Param("passport")String passport, @Param("passwd")String passwd);
 }

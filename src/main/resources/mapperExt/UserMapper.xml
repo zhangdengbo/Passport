@@ -34,4 +34,17 @@
     </if>
   </select>
 
+  <select id="getUserByPassportAndPassword" resultType="com.yidianpuzi.domain.User">
+    select
+    <include refid="Base_Column_List" />
+    from t_user
+    where  1=1
+    <if test="passport != null">
+      and   passport = #{passport}
+    </if>
+    <if test="passwd != passwd">
+      and   passwd = #{passwd}
+    </if>
+  </select>
+
 </mapper>

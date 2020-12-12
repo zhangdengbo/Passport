@@ -17,4 +17,6 @@ public interface UserService {
     User getUserById(Long id);
 
     void deleteUserById(Long id );
+
+    User getUserByPassportAndPassword(String passport, String passwd);
 }

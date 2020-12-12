@@ -1,0 +1,65 @@
+<!doctype html>
+<!--注意：引入thymeleaf的名称空间-->
+<#assign basePath=request.contextPath>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页面</title>
+    <link rel="stylesheet" type="text/css" href="${basePath}/static/css/easyui/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="${basePath}/static/css/easyui/themes/icon.css">
+    <script type="text/javascript" src="${basePath}/static/js/plugin//jquery.min.js" ></script>
+    <script type="text/javascript" src="${basePath}/static/js/plugin/easyui/jquery.easyui.min.js" ></script>
+    <script src="${basePath}/static/js/plugin/easyui/locale/easyui-lang-zh_CN.js"></script>
+    <script>
+        var  loginSpace = {
+            login : function(){
+
+
+            },
+            reset: function () {
+
+            }
+        }
+        $(document).ready(function () {
+
+
+
+
+        });
+
+    </script>
+</head>
+<body>
+
+<div id="panel_login" style="margin: auto;width: 300px;margin-top: 200px;">
+    <div id="login" class="easyui-panel" title="请登录" data-options="iconCls:'icon-mlogin'" style="width: 300px;height: 200px;">
+        <form action="02_main.html" method="get">
+            <table>
+                <tr>
+                    <td>用户名:</td>
+                    <td>
+                        <input id="userName" name="userName" value="" data-options="required:true" class="easyui-textbox"
+                               style="width: 80%"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>密&nbsp;&nbsp;&nbsp;码:</td>
+                    <td>
+                        <input id="passwd" name="passwd" value="" data-options="required:true" class="easyui-passwordbox"
+                               style="width: 80%"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <a id="btnCon" href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-save'">登录</a>&nbsp; &nbsp;&nbsp;
+                        <a id="btnCan" href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-cancel'">重置</a>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>

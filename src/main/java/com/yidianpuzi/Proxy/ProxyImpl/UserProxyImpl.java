@@ -35,6 +35,11 @@ public class UserProxyImpl implements UserProxy {
     }
 
     @Override
+    public User getUserByPassportAndPassword(String passport, String passwd) {
+        return userService.getUserByPassportAndPassword(passport,passwd);
+    }
+
+    @Override
     public List<User> findUsers(String userName, String phone, String passport, Integer pageNum, Integer pageSize) {
         return userService.findUsers(userName,phone,passport,pageNum,pageSize);
     }

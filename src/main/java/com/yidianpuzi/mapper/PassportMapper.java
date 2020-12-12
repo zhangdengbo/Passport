@@ -50,4 +50,7 @@ public interface PassportMapper {
      * @mbg.generated
      */
     int updateByPrimaryKey(Passport record);
+
+
+
 }

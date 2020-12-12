@@ -44,4 +44,9 @@ public class UserServiceImpl implements UserService {
     public void deleteUserById(Long id) {
         userMapper.deleteByPrimaryKey(id);
     }
+
+    @Override
+    public User getUserByPassportAndPassword(String passport, String passwd) {
+        return userMapper.getUserByPassportAndPassword(passport,passwd);
+    }
 }

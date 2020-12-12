@@ -1,6 +1,7 @@
 package com.yidianpuzi.Proxy;
 
 import com.yidianpuzi.domain.User;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -17,5 +18,8 @@ public interface UserProxy {
     User getUserById(Long id);
 
     void deleteUserById(Long id );
+
+    User getUserByPassportAndPassword(String passport,String passwd);
+
 
 }
