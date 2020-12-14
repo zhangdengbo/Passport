@@ -48,6 +48,7 @@ public class LoginController {
         log.info("{}","测试1");
         log.info("{}","测试2");
         log.info("{}","测试5");
+        log.info("{}","测试6");
         return  response;
     }
 
