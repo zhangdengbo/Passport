@@ -47,8 +47,11 @@ public class LoginController {
         response.setResult(passport);
         log.info("{}","测试1");
         log.info("{}","测试2");
+<<<<<<< HEAD
         log.info("{}","测试5");
         log.info("{}","测试6");
+=======
+>>>>>>> parent of ad50633... 'test5'
         return  response;
     }
 
