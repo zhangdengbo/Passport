@@ -46,6 +46,7 @@ public class LoginController {
         response.setStatus(PassportStatus.SUCCESS.getCode());
         response.setResult(passport);
         log.info("{}","测试1");
+        log.info("{}","测试2");
         return  response;
     }
 
