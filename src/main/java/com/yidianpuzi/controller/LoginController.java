@@ -47,6 +47,7 @@ public class LoginController {
         response.setResult(passport);
         log.info("{}","测试1");
         log.info("{}","测试2");
+        log.info("{}","测试5");
         return  response;
     }
 
