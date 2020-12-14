@@ -47,6 +47,7 @@ public class LoginController {
         response.setResult(passport);
         log.info("test10");
         log.info("test11");
+        log.info("test12");
         return  response;
     }
 
