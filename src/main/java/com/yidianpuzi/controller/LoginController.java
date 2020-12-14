@@ -45,12 +45,6 @@ public class LoginController {
         Passport passport = passportService.getPassportById(1l);
         response.setStatus(PassportStatus.SUCCESS.getCode());
         response.setResult(passport);
-        log.info("{}","测试1");
-        log.info("{}","测试2");
-
-        log.info("{}","测试5");
-        log.info("{}","测试6");
-
         return  response;
     }
 
