@@ -48,6 +48,7 @@ public class LoginController {
         log.info("info1");
         log.info("info2");
         log.info("info3");
+        log.info("info4");
         return  response;
     }
 
