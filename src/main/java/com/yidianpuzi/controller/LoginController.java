@@ -29,14 +29,14 @@ public class LoginController {
     private UserProxy userProxy;
 
 
-    @RequestMapping(value = "login", method = {RequestMethod.GET, RequestMethod.POST})
+    @RequestMapping(value = "login1", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
     @ApiOperation("登录")
     @ApiImplicitParams({
             @ApiImplicitParam(name="phone" , value="手机号码" ,dataType = "String"),
             @ApiImplicitParam(name="passord" , value="密码" ,dataType = "String")}
     )
-    public PassportResponse login(String phone, String passord){
+    public PassportResponse login1(String phone, String passord){
         log.debug("手机：{}，密码{}",phone,passord);
         log.info("手机：{}，密码{}",phone,passord);
         log.warn("手机：{}，密码{}",phone,passord);
